@@ -1,0 +1,1586 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Carmen · Derecho Penal · Cap. 7</title>
+<meta name="description" content="Plataforma de estudio guiado del la Segunda parte, Capítulo segundo (Elementos objetivos de la conducta-típica) de Lecciones de derecho penal, Díaz-Aranda, ajustada a Carmen">
+<meta name="theme-color" content="#c2185b">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display&display=swap">
+<style>
+/* Concepto: «Expediente rosa» (mismo estilo que los capítulos 2 a 6); citas del libro como fojas engrapadas, rosa como color de marca. */
+:root {
+  --bg: #fbf1f5;
+  --surface: #ffffff;
+  --surface-2: #f8e6ee;
+  --ink: #2b1621;
+  --muted: #7b5b69;
+  --line: #efd3df;
+  --accent: #c2185b;
+  --accent-2: #e04a86;
+  --accent-soft: #fde1ec;
+  --on-accent: #ffffff;
+  --mark: #ffc4da;
+  --mark-ink: #2b1621;
+  --ok: #18794e;
+  --ok-soft: #ddf3e8;
+  --bad: #b3261e;
+  --bad-soft: #fde4e1;
+  --warn: #8a5300;
+  --warn-soft: #fff0d9;
+  --paper-rule: #f3c6d7;
+  --shadow: 0 1px 2px rgba(120, 20, 60, .06), 0 8px 22px rgba(120, 20, 60, .07);
+  --font-display: "DM Serif Display", Georgia, "Times New Roman", serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --r: 16px;
+  --cw: 24px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #170c12; --surface: #241520; --surface-2: #301c29; --ink: #f9e9f0; --muted: #c4a3b2; --line: #44293a;
+    --accent: #ff6fa3; --accent-2: #ff9cc0; --accent-soft: #3d1a2c; --on-accent: #2a0716;
+    --mark: #6e2547; --mark-ink: #fff0f6; --ok: #62d39c; --ok-soft: #153325; --bad: #ff8b80; --bad-soft: #3e1c1a;
+    --warn: #ffc56b; --warn-soft: #3a2a12; --paper-rule: #5c2a42; --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.3);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #170c12; --surface: #241520; --surface-2: #301c29; --ink: #f9e9f0; --muted: #c4a3b2; --line: #44293a;
+  --accent: #ff6fa3; --accent-2: #ff9cc0; --accent-soft: #3d1a2c; --on-accent: #2a0716;
+  --mark: #6e2547; --mark-ink: #fff0f6; --ok: #62d39c; --ok-soft: #153325; --bad: #ff8b80; --bad-soft: #3e1c1a;
+  --warn: #ffc56b; --warn-soft: #3a2a12; --paper-rule: #5c2a42; --shadow: 0 1px 2px rgba(0,0,0,.35), 0 8px 22px rgba(0,0,0,.3);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 17px; line-height: 1.6; }
+button, input, select, textarea { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; border-radius: 8px; }
+mark { background: linear-gradient(transparent 40%, var(--mark) 40%, var(--mark) 92%, transparent 92%); color: var(--mark-ink); padding: 0 2px; }
+a { color: var(--accent); }
+.app { max-width: 720px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); padding-block: 18px calc(100px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 16px; grid-template-columns: minmax(0, 1fr); }
+.app > * { min-width: 0; }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; margin: 0; text-wrap: balance; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.4rem; }
+h3 { font-size: 1.1rem; font-family: var(--font-body); font-weight: 700; }
+p { margin: 0; }
+.muted { color: var(--muted); }
+.small { font-size: .88rem; }
+.center { text-align: center; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+.eyebrow { font-size: .74rem; letter-spacing: .09em; text-transform: uppercase; font-weight: 700; color: var(--muted); }
+.stack { display: grid; gap: 12px; min-width: 0; grid-template-columns: minmax(0, 1fr); }
+.stack.tight { gap: 3px; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.spread { display: flex; gap: 10px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.card { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 18px; min-width: 0; display: grid; gap: 10px; }
+.card.quiet { box-shadow: none; background: transparent; border: 1.5px dashed var(--paper-rule); }
+.tnum { font-variant-numeric: tabular-nums; }
+.tight-list { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+
+.btn { border: 0; border-radius: 999px; padding: 11px 20px; font-weight: 700; background: var(--accent); color: var(--on-accent); display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; text-decoration: none; max-width: 100%; text-align: center; line-height: 1.25; }
+.btn:active { transform: translateY(1px); }
+.btn.ghost { background: var(--accent-soft); color: var(--accent); }
+.btn.line { background: transparent; color: var(--ink); border: 1.5px solid var(--line); }
+.btn.small { padding: 8px 14px; min-height: 40px; font-size: .9rem; }
+.btn.wide { width: 100%; }
+.btn[disabled] { opacity: .45; cursor: not-allowed; }
+.icon-btn { border: 1.5px solid var(--line); background: var(--surface); border-radius: 999px; padding: 6px 12px; font-size: .86rem; font-weight: 700; min-height: 38px; display: inline-flex; gap: 6px; align-items: center; color: var(--ink); text-align: left; }
+.icon-btn.on { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.chip { display: inline-flex; align-items: center; font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; padding: 3px 9px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); white-space: nowrap; }
+.chip.done { background: var(--ok-soft); color: var(--ok); }
+.bar { height: 10px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+.bar > i { display: block; height: 100%; background: var(--accent); border-radius: 999px; transition: width .4s ease; }
+.bar.ok > i { background: var(--ok); }
+
+/* Inicio */
+.hero { background: var(--accent); color: var(--on-accent); border-radius: 22px; padding: 22px 20px; display: grid; gap: 10px; position: relative; overflow: hidden; }
+.hero::after { content: "§"; position: absolute; right: -8px; top: -38px; font-family: var(--font-display); font-size: 11rem; line-height: 1; opacity: .13; pointer-events: none; }
+.hero h1 { font-size: 2.3rem; color: var(--on-accent); }
+.hero .sub { opacity: .92; max-width: 46ch; }
+.eyebrow.on-acc { color: var(--on-accent); opacity: .8; }
+.hero-meter { display: grid; gap: 6px; margin-top: 4px; font-weight: 700; font-size: .92rem; }
+.hero .bar { background: rgba(255,255,255,.28); }
+.hero .bar > i { background: var(--on-accent); }
+.next-row { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 14px; align-items: start; }
+.big-ic { width: 52px; height: 52px; border-radius: 14px; background: var(--accent-soft); display: grid; place-items: center; font-size: 1.6rem; }
+.due { border: 2px solid var(--accent); }
+.mission-l { display: flex; gap: 10px; align-items: center; padding: 12px; border-radius: 12px; background: var(--surface-2); border: 0; width: 100%; text-align: left; }
+.mission-l .t { flex: 1; min-width: 0; font-weight: 700; }
+.method-l { margin: 0; padding-left: 22px; display: grid; gap: 8px; }
+.method-l li::marker { color: var(--accent); font-weight: 800; }
+.motiv { font-family: var(--font-display); font-size: 1.3rem; line-height: 1.3; color: var(--accent); }
+
+/* Aprender */
+.route { display: grid; gap: 8px; }
+.lrow { display: grid; grid-template-columns: 36px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 14px; border-radius: 14px; background: var(--surface); border: 1.5px solid var(--line); text-align: left; width: 100%; }
+.lrow .n { width: 36px; height: 36px; border-radius: 50%; border: 2px solid var(--paper-rule); display: grid; place-items: center; font-weight: 800; color: var(--accent); font-family: var(--font-display); font-size: 1.05rem; }
+.lrow.done .n { background: var(--ok); border-color: var(--ok); color: var(--on-accent); font-family: var(--font-body); }
+.lrow .tt { font-weight: 700; line-height: 1.3; }
+.lrow .meta { font-size: .8rem; color: var(--muted); line-height: 1.35; }
+.lrow .ic { font-size: 1.3rem; }
+.back { border: 0; background: none; color: var(--accent); font-weight: 800; padding: 6px 0; justify-self: start; }
+.lesson-top { display: grid; gap: 8px; }
+.goal { font-size: .95rem; color: var(--muted); }
+.steps-dots { display: flex; gap: 4px; }
+.steps-dots i { flex: 1; height: 6px; border-radius: 99px; background: var(--surface-2); }
+.steps-dots i.on { background: var(--accent); }
+.steps-dots i.cur { background: var(--accent-2); }
+.sheet { background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 20px 18px 20px 30px; position: relative; display: grid; gap: 12px; min-width: 0; }
+.sheet::before { content: ""; position: absolute; left: 14px; top: 16px; bottom: 16px; width: 2px; background: var(--paper-rule); border-radius: 2px; }
+.sheet h2 { color: var(--accent); }
+.sheet .body { font-size: 1.07rem; line-height: 1.7; }
+.nav-btns { display: flex; gap: 10px; }
+.nav-btns .btn { flex: 1; }
+.callout { border-radius: 14px; padding: 14px 16px; display: grid; gap: 8px; }
+.callout.trap { background: var(--bad-soft); }
+.callout.trap h3 { color: var(--bad); }
+.callout.trick { background: var(--accent-soft); }
+.callout.trick h3 { color: var(--accent); }
+.callout ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+.ta { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 12px 14px; background: var(--bg); resize: vertical; min-height: 140px; line-height: 1.55; }
+.model { background: var(--ok-soft); border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+.check { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid var(--line); }
+.check input { width: 22px; height: 22px; accent-color: var(--accent); flex: none; margin-top: 2px; }
+
+/* Visuales */
+.vis { min-width: 0; }
+.line-wrap { overflow-x: auto; padding-bottom: 6px; }
+.line { display: flex; min-width: max-content; }
+.line-item { width: 138px; display: grid; gap: 4px; justify-items: center; align-content: start; text-align: center; position: relative; padding: 0 6px; }
+.line-item::before { content: ""; position: absolute; top: calc(2.6em + 9px); left: 0; right: 0; height: 3px; background: var(--paper-rule); }
+.line-age { font-size: .78rem; font-weight: 800; color: var(--accent); min-height: 2.6em; display: grid; align-items: end; line-height: 1.2; }
+.line-dot { width: 18px; height: 18px; border-radius: 50%; background: var(--accent); border: 3px solid var(--surface); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.line-t { font-weight: 700; font-size: .88rem; line-height: 1.2; }
+.line-s { font-size: .76rem; color: var(--muted); line-height: 1.3; }
+.flow { display: grid; gap: 4px; }
+.flow-step { display: flex; gap: 10px; align-items: flex-start; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; }
+.flow-step b { display: block; line-height: 1.25; }
+.flow-step small { display: block; line-height: 1.4; margin-top: 2px; color: var(--muted); font-size: .88rem; }
+.flow-n { flex: none; width: 26px; height: 26px; border-radius: 50%; background: var(--accent); color: var(--on-accent); display: grid; place-items: center; font-weight: 800; font-size: .8rem; }
+.flow-arrow { text-align: center; color: var(--muted); line-height: 1; font-size: .9rem; }
+.tbl-wrap { overflow-x: auto; border-radius: 12px; border: 1px solid var(--line); }
+.tbl { border-collapse: collapse; width: 100%; font-size: .92rem; min-width: 420px; }
+.tbl th { background: var(--accent-soft); color: var(--accent); text-align: left; padding: 8px 10px; font-size: .76rem; letter-spacing: .05em; text-transform: uppercase; }
+.tbl td { padding: 9px 10px; border-top: 1px solid var(--line); vertical-align: top; line-height: 1.4; }
+.tree { display: grid; gap: 10px; justify-items: center; }
+.tree-root { background: var(--accent); color: var(--on-accent); padding: 8px 18px; border-radius: 12px; font-family: var(--font-display); font-size: 1.1rem; }
+.tree-kids { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 8px; width: 100%; }
+.tree-kid { border: 2px solid var(--accent); border-radius: 12px; padding: 10px; display: grid; gap: 4px; }
+.tree-kid small { color: var(--muted); line-height: 1.35; }
+.vs { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); gap: 8px; }
+.vs-col { background: var(--surface-2); border-radius: 12px; padding: 12px; min-width: 0; }
+.vs-h { font-weight: 800; font-size: .82rem; letter-spacing: .03em; color: var(--accent); margin-bottom: 6px; text-transform: uppercase; }
+.vs-col ul { margin: 0; padding-left: 18px; display: grid; gap: 5px; font-size: .93rem; line-height: 1.4; }
+.vs-mid { align-self: center; font-family: var(--font-display); color: var(--muted); }
+@media (max-width: 480px) { .vs { grid-template-columns: minmax(0,1fr); } .vs-mid { justify-self: center; } }
+.pairs { display: grid; gap: 6px; }
+.pair { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 12px; background: var(--surface-2); border-radius: 12px; padding: 10px 12px; font-size: .93rem; line-height: 1.4; }
+@media (max-width: 480px) { .pair { grid-template-columns: minmax(0,1fr); gap: 2px; } }
+.bookq, .nowbox { border-radius: 4px 14px 14px 4px; border-left: 4px solid var(--accent); background: var(--accent-soft); padding: 12px 14px; display: grid; gap: 6px; }
+.nowbox { border-left-color: var(--warn); background: var(--warn-soft); }
+.bookq-h { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); }
+.nowbox .bookq-h { color: var(--warn); }
+.bookq-b { font-size: .98rem; line-height: 1.55; }
+
+/* Preguntas */
+.q { gap: 12px; }
+.q-text { font-size: 1.07rem; font-weight: 700; line-height: 1.5; }
+.qn { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; background: var(--accent-soft); color: var(--accent); font-size: .8rem; margin-right: 8px; vertical-align: 2px; }
+.opts { display: grid; gap: 8px; }
+.opt { display: grid; grid-template-columns: 30px minmax(0, 1fr); gap: 10px; align-items: center; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 10px 12px; min-height: 50px; line-height: 1.4; }
+.opt .ov { width: 30px; height: 30px; border-radius: 50%; border: 2px solid var(--paper-rule); display: grid; place-items: center; font-weight: 800; font-size: .82rem; color: var(--muted); }
+.opt:not([disabled]):hover { border-color: var(--accent); }
+.opt.ok { border-color: var(--ok); background: var(--ok-soft); }
+.opt.ok .ov { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.opt.no { border-color: var(--bad); background: var(--bad-soft); }
+.opt.no .ov { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.opt[disabled] { cursor: default; }
+.fb { border-radius: 12px; padding: 12px 14px; display: grid; gap: 6px; }
+.fb.ok { background: var(--ok-soft); }
+.fb.no { background: var(--bad-soft); }
+.fb b.h { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+.fb.ok b.h { color: var(--ok); }
+.fb.no b.h { color: var(--bad); }
+.fb .pg { font-size: .8rem; font-weight: 700; color: var(--muted); }
+.grade { justify-items: center; text-align: center; padding: 22px; }
+.grade > b { font-family: var(--font-display); font-weight: 400; font-size: 4rem; line-height: 1; color: var(--accent); }
+.review-item { border-top: 1px solid var(--line); padding-top: 10px; display: grid; gap: 4px; font-size: .95rem; overflow-wrap: anywhere; }
+.review-item .ok { color: var(--ok); font-weight: 700; }
+.search { width: 100%; border: 1.5px solid var(--line); border-radius: 12px; padding: 11px 14px; background: var(--surface); min-height: 46px; }
+
+/* Practicar */
+.tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(155px, 1fr)); gap: 10px; }
+.tile { border: 0; text-align: left; background: var(--surface); border-radius: var(--r); box-shadow: var(--shadow); padding: 14px; display: grid; gap: 4px; align-content: start; min-height: 112px; }
+.tile .ti { font-size: 1.5rem; }
+.tile b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; }
+.tile span:last-child { font-size: .84rem; color: var(--muted); line-height: 1.35; }
+.tf-card { text-align: center; font-size: 1.2rem; font-weight: 700; padding: 30px 18px; line-height: 1.45; }
+.tf-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.order-list { display: grid; gap: 8px; }
+.order-item { display: grid; grid-template-columns: 28px minmax(0, 1fr) auto; gap: 8px; align-items: center; background: var(--surface); border: 1.5px solid var(--line); border-radius: 12px; padding: 8px 10px; line-height: 1.35; }
+.order-item .on { font-weight: 800; color: var(--accent); text-align: center; }
+.order-item .mv { display: flex; gap: 4px; }
+.order-item .mv button { width: 40px; height: 40px; border-radius: 10px; border: 1.5px solid var(--line); background: var(--surface-2); font-weight: 800; }
+.order-item .mv button[disabled] { opacity: .3; }
+.order-item.good { border-color: var(--ok); background: var(--ok-soft); }
+.order-item.badp { border-color: var(--bad); background: var(--bad-soft); }
+.match-grid { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 8px; }
+.match-grid .stack { gap: 8px; }
+.match-grid button { border: 1.5px solid var(--line); background: var(--surface); border-radius: 12px; padding: 10px; min-height: 56px; font-size: .92rem; font-weight: 600; line-height: 1.3; overflow-wrap: anywhere; }
+.match-grid button.sel { border-color: var(--accent); background: var(--accent-soft); }
+.match-grid button.done { border-color: var(--ok); background: var(--ok-soft); opacity: .7; }
+.match-grid button.err { border-color: var(--bad); background: var(--bad-soft); }
+.flip { perspective: 1000px; border: 0; background: none; padding: 0; width: 100%; }
+.flip-in { position: relative; min-height: 240px; transition: transform .5s; transform-style: preserve-3d; }
+.flip.on .flip-in { transform: rotateY(180deg); }
+.face { position: absolute; inset: 0; backface-visibility: hidden; -webkit-backface-visibility: hidden; border-radius: 20px; padding: 24px; display: grid; place-items: center; text-align: center; font-size: 1.25rem; font-weight: 700; line-height: 1.4; box-shadow: var(--shadow); }
+.face.front { background: var(--surface); border: 2px solid var(--paper-rule); }
+.face.back { background: var(--accent); color: var(--on-accent); transform: rotateY(180deg); font-size: 1.05rem; font-weight: 600; }
+.face small { display: block; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+.face small.hint-s { margin: 12px 0 0; }
+
+/* Crucigrama */
+.cw-wrap { overflow-x: auto; padding: 4px 0 8px; }
+.cw { display: grid; gap: 2px; width: max-content; margin: 0 auto; }
+.cw-x { width: var(--cw); height: var(--cw); }
+.cw-c { position: relative; width: var(--cw); height: var(--cw); background: var(--surface); border: 1.5px solid var(--paper-rule); border-radius: 4px; display: block; }
+.cw-c i { position: absolute; top: 0; left: 2px; font-size: 8px; font-style: normal; font-weight: 800; color: var(--muted); line-height: 1; pointer-events: none; }
+.cw-c input { width: 100%; height: 100%; border: 0; background: transparent; text-align: center; font-weight: 800; font-size: .82rem; padding: 4px 0 0; text-transform: uppercase; color: var(--ink); caret-color: var(--accent); }
+.cw-c input:focus { outline: none; }
+.cw-c:focus-within { border-color: var(--accent); box-shadow: 0 0 0 2px var(--accent); z-index: 1; }
+.cw-c.hl { background: var(--accent-soft); }
+.cw-c.good { background: var(--ok-soft); border-color: var(--ok); }
+.cw-c.bad { background: var(--bad-soft); border-color: var(--bad); }
+.cw-now { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; padding: 12px 14px; font-size: .95rem; }
+.clues { display: grid; gap: 6px; }
+.clue { display: grid; grid-template-columns: 28px minmax(0,1fr); gap: 8px; text-align: left; border: 0; background: var(--surface-2); border-radius: 10px; padding: 8px 10px; line-height: 1.35; font-size: .93rem; }
+.clue b { color: var(--accent); }
+.clue.on { outline: 2px solid var(--accent); }
+.clue.solved { opacity: .55; text-decoration: line-through; }
+@media (min-width: 560px) { :root { --cw: 32px; } .cw-c input { font-size: 1rem; } .cw-c i { font-size: 9px; } }
+
+/* Videos y avance */
+.vrow { grid-template-columns: minmax(0,1fr) auto; align-items: center; gap: 12px; }
+@media (max-width: 420px) { .vrow { grid-template-columns: minmax(0,1fr); } }
+.trust { background: var(--accent-soft); box-shadow: none; }
+.link { font-weight: 700; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0,1fr)); gap: 10px; }
+.stat { background: var(--surface); border-radius: var(--r); padding: 14px 12px; box-shadow: var(--shadow); display: grid; gap: 2px; min-width: 0; }
+.stat b { font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--accent); line-height: 1; }
+.stat span { font-size: .78rem; color: var(--muted); line-height: 1.3; }
+.evidence { border: 2px solid var(--ok); box-shadow: none; }
+.unitbar { display: grid; gap: 5px; }
+
+/* Navegación */
+.tabbar { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); padding-bottom: env(safe-area-inset-bottom, 0px); padding-left: max(8px, env(safe-area-inset-left, 0px)); padding-right: max(8px, env(safe-area-inset-right, 0px)); }
+.tabbar-in { max-width: 720px; margin: 0 auto; display: grid; grid-template-columns: repeat(6, minmax(0,1fr)); }
+.tab { border: 0; background: none; padding: 8px 0 9px; display: grid; justify-items: center; gap: 2px; font-size: .66rem; font-weight: 700; color: var(--muted); min-height: 58px; }
+.tab svg { width: 24px; height: 24px; }
+.tab.on { color: var(--accent); }
+.toast { position: fixed; left: 50%; transform: translateX(-50%); bottom: calc(78px + env(safe-area-inset-bottom, 0px)); z-index: 50; background: var(--ink); color: var(--bg); border-radius: 999px; padding: 10px 18px; font-weight: 700; font-size: .92rem; box-shadow: var(--shadow); max-width: calc(100% - 32px); text-align: center; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* v2 · guía, lectura guiada, examen, glosario, hoja interactiva */
+.guide { border: 2px solid var(--accent); }
+.secmap { display: grid; gap: 8px; }
+.sec { display: grid; grid-template-columns: 40px minmax(0,1fr); gap: 12px; align-items: start; text-align: left; border: 1.5px solid var(--line); background: var(--surface); border-radius: 14px; padding: 12px; line-height: 1.4; }
+.sec b { font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; color: var(--accent); }
+.sec span span { font-size: .9rem; }
+.sec small { color: var(--muted); font-size: .8rem; }
+.sec-ic { width: 40px; height: 40px; border-radius: 12px; background: var(--accent-soft); color: var(--accent); display: grid; place-items: center; }
+.sec-ic svg { width: 22px; height: 22px; }
+.howto { background: var(--accent-soft); box-shadow: none; }
+.phase-legend { display: grid; gap: 6px; font-size: .9rem; }
+.phase-legend span b { color: var(--accent); margin-right: 6px; }
+.phasebar { display: grid; grid-template-columns: repeat(5, minmax(0,1fr)); gap: 4px; }
+.ph { border: 0; border-top: 5px solid var(--surface-2); background: none; padding: 6px 0 0; font-size: .7rem; font-weight: 800; color: var(--muted); text-align: left; letter-spacing: .02em; }
+.ph.on { border-top-color: var(--accent); color: var(--accent); }
+.ph.cur { border-top-color: var(--accent-2); color: var(--ink); }
+.plan { display: grid; gap: 6px; }
+.plan-r { display: grid; grid-template-columns: 26px minmax(0,1fr) auto; gap: 10px; align-items: center; background: var(--surface-2); border-radius: 12px; padding: 9px 12px; }
+.plan-r small { display: block; color: var(--muted); font-size: .85rem; line-height: 1.35; }
+.tips { background: var(--warn-soft); box-shadow: none; }
+.tips h2 { color: var(--warn); }
+.frag { border-left: 5px solid var(--paper-rule); }
+.frag.fdone { border-left-color: var(--ok); }
+.fr-where { background: var(--surface-2); border-radius: 12px; padding: 10px 12px; display: grid; gap: 4px; font-size: .95rem; font-style: italic; }
+.lab { font-style: normal; font-size: .68rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--accent); margin-right: 6px; }
+.fr-look { font-size: 1.02rem; }
+.case-s { background: var(--surface-2); border-radius: 12px; padding: 12px; line-height: 1.55; }
+.chip.fmt { vertical-align: 2px; margin-right: 4px; }
+.opt.picked { border-color: var(--accent); background: var(--accent-soft); }
+.opt.picked .ov { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.qnav { display: grid; grid-template-columns: repeat(auto-fill, minmax(34px, 1fr)); gap: 5px; }
+.qnav button { height: 34px; border-radius: 8px; border: 1.5px solid var(--line); background: var(--surface); font-size: .78rem; font-weight: 700; }
+.qnav button.ans { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.qnav button.cur { outline: 2px solid var(--ink); }
+.exrow { grid-template-columns: minmax(0,1fr) auto; align-items: center; }
+.exn { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; }
+.review-item .yo { color: var(--bad); }
+.linkbtn { border: 0; background: none; color: var(--accent); font-weight: 700; padding: 2px 0; text-align: left; justify-self: start; }
+.gloss { display: grid; gap: 8px; }
+.gterm { background: var(--surface); border-radius: 14px; padding: 14px; display: grid; gap: 6px; border: 1.5px solid var(--line); }
+.gterm > .spread b { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; color: var(--accent); }
+.gex { font-size: .92rem; color: var(--muted); }
+.vrow { display: grid; gap: 10px; }
+.vq { font-size: .92rem; }
+.sel { user-select: all; -webkit-user-select: all; color: var(--accent); font-weight: 700; }
+.url { font-weight: 400; overflow-wrap: anywhere; font-size: .78rem; }
+.tl-wrap { overflow-x: auto; padding-bottom: 6px; }
+.tl { display: flex; min-width: max-content; }
+.tl-i { width: 92px; border: 0; background: none; display: grid; justify-items: center; gap: 4px; text-align: center; position: relative; padding: 0 4px; align-content: start; }
+.tl-i::before { content: ""; position: absolute; top: calc(1.3em + 9px); left: 0; right: 0; height: 3px; background: var(--paper-rule); }
+.tl-y { font-size: .74rem; font-weight: 800; color: var(--accent); min-height: 1.3em; white-space: nowrap; }
+.tl-d { width: 16px; height: 16px; border-radius: 50%; background: var(--surface); border: 3px solid var(--accent); z-index: 1; }
+.tl-i.on .tl-d { background: var(--accent); transform: scale(1.3); }
+.tl-t { font-size: .74rem; font-weight: 700; line-height: 1.2; }
+.tl-i.on .tl-t { color: var(--accent); }
+.tl-card { background: var(--accent-soft); border-radius: 14px; padding: 14px; display: grid; gap: 8px; }
+.rvt th[scope=row] { background: var(--surface-2); color: var(--ink); text-transform: none; letter-spacing: 0; font-size: .85rem; vertical-align: top; }
+.rv { width: 100%; min-height: 44px; border: 1.5px dashed var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 8px; text-align: left; font-size: .88rem; line-height: 1.35; color: var(--ink); }
+.rv span { color: var(--accent); font-weight: 700; font-size: .78rem; }
+.rv.open { border-style: solid; border-color: var(--line); background: var(--surface); }
+.era { display: grid; gap: 6px; padding-top: 10px; border-top: 1px solid var(--line); }
+.era-g { display: grid; grid-template-columns: 150px minmax(0,1fr); gap: 6px 10px; align-items: center; }
+.era-g .lab { margin: 0; }
+@media (max-width: 480px) { .era-g { grid-template-columns: minmax(0,1fr); } }
+.clue-r { display: flex; gap: 10px; align-items: flex-start; font-size: 1.05rem; }
+.vt { font-family: var(--font-display); font-weight: 400; font-size: 1.25rem; }
+.vid { display: grid; gap: 8px; border-top: 1px solid var(--line); padding-top: 12px; }
+.vid > .vid-play + .stack, .vid { grid-template-columns: minmax(0,1fr); }
+.vid-play { display: none; }
+.ojo { background: var(--warn-soft); border-radius: 10px; padding: 8px 10px; }
+.ok-n { color: var(--ok); font-weight: 700; }
+
+
+/* ═══ v3 · Capítulo 3 · ajustes por el cuestionario de Carmen ═══ */
+body { font-size: 18px; }
+.app { padding-block: 18px calc(110px + env(safe-area-inset-bottom, 0px)); }
+.tabbar-in { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.tab { font-size: .78rem; min-height: 62px; }
+.btn { min-height: 56px; font-size: 1rem; }
+.btn.small { min-height: 44px; }
+.btn.tall { flex-direction: column; gap: 2px; padding-block: 12px; }
+.btn.tall small { font-weight: 400; opacity: .85; }
+.btn.danger { color: var(--bad); border-color: var(--bad); }
+.tight-6 { gap: 6px; }
+
+/* Inicio: un solo botón grande */
+.home { gap: 14px; }
+.btn.big { flex-direction: column; gap: 4px; min-height: 92px; border-radius: 22px; padding: 16px 20px; box-shadow: 0 6px 18px rgba(194, 24, 91, .28); }
+.big-t { font-family: var(--font-display); font-weight: 400; font-size: 1.7rem; line-height: 1.1; }
+.big-s { font-weight: 400; font-size: .92rem; opacity: .95; line-height: 1.35; }
+details.more { background: var(--surface); border-radius: var(--r); border: 1.5px solid var(--line); }
+details.more > summary { list-style: none; cursor: pointer; padding: 14px 18px; font-weight: 700; color: var(--muted); display: flex; justify-content: space-between; align-items: center; min-height: 56px; }
+details.more > summary::-webkit-details-marker { display: none; }
+details.more > summary::after { content: "▾"; transition: transform .2s; }
+details.more[open] > summary::after { transform: rotate(180deg); }
+details.more > .stack { padding: 0 12px 12px; }
+.mission-l { min-height: 54px; color: var(--ink); }
+.motiv-s { font-family: var(--font-display); color: var(--accent); font-size: 1.1rem; line-height: 1.3; padding: 4px 8px; }
+.hero h1 { font-size: 2.1rem; }
+
+/* Modo enfocado */
+.focus .ftop { position: sticky; top: 0; z-index: 15; background: var(--bg); display: flex; gap: 12px; align-items: center; padding: calc(10px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 8px max(16px, env(safe-area-inset-left, 0px)); max-width: 720px; margin: 0 auto; }
+.xbtn { flex: none; border: 1.5px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; padding: 8px 14px; min-height: 44px; font-weight: 700; }
+.fstep { display: grid; min-width: 0; line-height: 1.25; }
+.fstep b { font-size: .98rem; }
+.fstep span { font-size: .82rem; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar.thin { height: 6px; max-width: 688px; margin: 0 auto; }
+.focus .bar.thin { margin-inline: max(16px, calc((100% - 688px) / 2)); }
+.focus-main { padding-top: 14px; }
+.fbot { position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; background: var(--surface); border-top: 1px solid var(--line); padding: 10px max(16px, env(safe-area-inset-right, 0px)) calc(10px + env(safe-area-inset-bottom, 0px)) max(16px, env(safe-area-inset-left, 0px)); display: flex; gap: 10px; align-items: center; justify-content: center; }
+.fbot > * { max-width: 520px; }
+.back-l { flex: none; border: 0; background: none; color: var(--muted); font-weight: 700; padding: 10px 6px; min-height: 48px; }
+.back-l[disabled] { opacity: .3; }
+.btn.big-n { flex: 1; min-height: 60px; font-size: 1.1rem; border-radius: 18px; }
+.btn.big-n.wide { width: 100%; }
+.sheet .body { font-size: 1.1rem; }
+.sheet > .say.wide { justify-self: stretch; }
+
+/* Botón de voz */
+.say { border: 2px solid var(--accent); background: var(--accent-soft); color: var(--accent); border-radius: 999px; padding: 8px 16px; min-height: 48px; font-weight: 800; display: inline-flex; gap: 8px; align-items: center; justify-content: center; justify-self: start; max-width: 100%; }
+.say.wide { width: 100%; min-height: 56px; font-size: 1.05rem; }
+.say .ic { font-size: 1.2rem; }
+.say.on { background: var(--accent); color: var(--on-accent); }
+.fb .say, .model .say, .gterm .say { justify-self: start; }
+
+/* Palabras difíciles */
+.hw { border: 0; background: none; padding: 0; margin: 0; font: inherit; color: inherit; cursor: pointer; text-decoration: underline dotted 2px var(--accent); text-underline-offset: 4px; display: inline; line-height: inherit; }
+.hw-q, .hw-demo .hw-q { display: inline-grid; place-items: center; width: 1.05em; height: 1.05em; margin-left: 2px; border-radius: 50%; background: var(--accent); color: var(--on-accent); font-size: .62em; font-weight: 800; vertical-align: .55em; text-decoration: none; }
+.hw-demo { text-decoration: underline dotted 2px var(--accent); text-underline-offset: 4px; }
+.scrim { position: fixed; inset: 0; background: rgba(20, 5, 12, .45); z-index: 40; }
+.bsheet { position: fixed; left: 0; right: 0; bottom: 0; z-index: 41; background: var(--surface); border-radius: 22px 22px 0 0; padding: 10px 20px calc(20px + env(safe-area-inset-bottom, 0px)); display: grid; gap: 10px; max-width: 720px; margin: 0 auto; box-shadow: 0 -8px 30px rgba(0, 0, 0, .2); max-height: 80vh; overflow-y: auto; }
+.grab { width: 44px; height: 5px; border-radius: 99px; background: var(--line); justify-self: center; margin-bottom: 6px; }
+.bsheet h2 { color: var(--accent); font-size: 1.6rem; }
+.modal { position: fixed; z-index: 41; left: 50%; top: 50%; transform: translate(-50%, -50%); width: min(420px, calc(100% - 32px)); background: var(--surface); border-radius: 22px; padding: 24px 20px; display: grid; gap: 12px; text-align: center; box-shadow: var(--shadow); }
+.big-emoji { font-size: 3rem; line-height: 1; }
+.toast { bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
+
+/* Cuadro sinóptico con llaves */
+.sn-wrap { padding: 4px 0; }
+.sn { display: flex; align-items: center; }
+.sn-root { flex: none; background: var(--accent); color: var(--on-accent); font-family: var(--font-display); font-size: 1.08rem; line-height: 1.2; padding: 10px 12px; border-radius: 12px; max-width: 140px; text-align: center; }
+.sn-brace { flex: none; align-self: stretch; width: 14px; margin: 4px 6px 4px 12px; border: 3px solid var(--accent); border-right: 0; border-radius: 16px 0 0 16px; position: relative; }
+.sn-brace::before { content: ""; position: absolute; left: -12px; top: 50%; width: 10px; height: 3px; background: var(--accent); transform: translateY(-50%); }
+.sn-list { display: grid; gap: 12px; min-width: 0; flex: 1; }
+.sn-br { display: flex; align-items: center; min-width: 0; }
+.sn-bt { flex: none; width: 130px; font-weight: 800; color: var(--accent); background: var(--accent-soft); border-radius: 10px; padding: 7px 10px; line-height: 1.25; font-size: .95rem; }
+.sn-brace.sm { width: 10px; margin: 2px 4px 2px 10px; border-width: 2px; border-radius: 10px 0 0 10px; }
+.sn-brace.sm::before { left: -9px; width: 7px; height: 2px; }
+.sn-kids { list-style: none; margin: 0; padding: 0; display: grid; gap: 3px; font-size: .94rem; line-height: 1.32; min-width: 0; flex: 1; }
+.sn-kids li { padding: 1px 0; }
+@media (max-width: 560px) {
+  .sn { display: grid; grid-template-columns: auto minmax(0, 1fr); }
+  .sn-root { grid-column: 1 / -1; justify-self: start; max-width: none; text-align: left; margin-bottom: 4px; }
+  .sn > .sn-brace { margin: 2px 8px 2px 14px; }
+  .sn > .sn-brace::before { left: -3px; top: -8px; width: 3px; height: 8px; transform: none; }
+  .sn-br { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 0; }
+  .sn-bt { grid-column: 1 / -1; width: auto; justify-self: start; }
+  .sn-br > .sn-brace.sm { margin-left: 10px; }
+}
+
+/* Estación */
+.callout.trap > summary { cursor: pointer; font-weight: 800; color: var(--bad); min-height: 44px; display: flex; align-items: center; }
+.callout.trap[open] > summary { margin-bottom: 4px; }
+.trick { background: var(--accent-soft); border-radius: 10px; padding: 10px 12px; margin-top: 8px; }
+.model p { line-height: 1.55; }
+.done-card { background: var(--accent-soft); box-shadow: none; }
+.plan-r > span { font-size: 1.3rem; }
+.tile.fav { border: 2px solid var(--accent); }
+.audio-row { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+@media (max-width: 400px) { .audio-row { grid-template-columns: minmax(0, 1fr); } }
+.lrow .tt { display: block; }
+.lrow .meta { display: block; }
+
+/* Recorrido */
+.tour-s { justify-items: center; }
+.tour-s .body { text-align: center; }
+.phone { width: min(280px, 100%); border: 3px solid var(--line); border-radius: 26px; padding: 16px 14px; background: var(--bg); display: grid; gap: 10px; text-align: left; font-size: .9rem; }
+.m-hero { background: var(--accent); color: var(--on-accent); border-radius: 14px; padding: 12px; font-family: var(--font-display); font-size: 1.1rem; }
+.m-btn { background: var(--accent); color: var(--on-accent); border-radius: 16px; padding: 12px; text-align: center; font-weight: 800; display: grid; }
+.m-btn small { font-weight: 400; }
+.m-line { border: 1.5px solid var(--line); border-radius: 999px; padding: 8px; text-align: center; font-size: .82rem; color: var(--muted); }
+.m-steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 4px; text-align: center; font-size: .68rem; font-weight: 700; color: var(--muted); }
+.m-steps span { border-top: 5px solid var(--surface-2); padding-top: 4px; }
+.m-steps span.on { border-top-color: var(--accent); color: var(--accent); }
+.m-sheet { background: var(--surface); border-radius: 14px; padding: 12px; box-shadow: var(--shadow); }
+.pulse { animation: pulse 1.6s ease-in-out infinite; }
+@keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(224, 74, 134, .55); } 50% { box-shadow: 0 0 0 10px rgba(224, 74, 134, 0); } }
+.tour .fbot .btn.line { flex: none; min-height: 56px; }
+
+/* Tablas que caben en el celular */
+.tbl { min-width: 0; }
+.tbl td, .tbl th { overflow-wrap: anywhere; hyphens: auto; }
+@media (max-width: 480px) { .tbl { font-size: .86rem; } .tbl th, .tbl td { padding: 8px 7px; } }
+
+</style>
+</head>
+<body>
+<div id="app"><p style="padding:24px">Cargando tu plataforma…</p></div>
+<noscript><p style="padding:24px">Activa JavaScript para usar la plataforma.</p></noscript>
+<script>
+const V = {
+  line(items) {
+    return `<div class="vis line-wrap"><div class="line">${items.map((it) =>
+      `<div class="line-item"><div class="line-age">${it.a}</div><div class="line-dot"></div><div class="line-t">${it.t}</div>${it.s ? `<div class="line-s">${it.s}</div>` : ''}</div>`).join('')}</div></div>`;
+  },
+  flow(items) {
+    return `<div class="vis flow">${items.map((it, i) =>
+      `<div class="flow-step"><span class="flow-n">${i + 1}</span><div><b>${it.t}</b>${it.s ? `<small>${it.s}</small>` : ''}</div></div>`).join('<div class="flow-arrow" aria-hidden="true">↓</div>')}</div>`;
+  },
+  tbl(head, rows) {
+    return `<div class="vis tbl-wrap"><table class="tbl"><thead><tr>${head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r => `<tr>${r.map((c, i) => i === 0 ? `<td><b>${c}</b></td>` : `<td>${c}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  },
+  vs(a, b) {
+    const col = c => `<div class="vs-col"><div class="vs-h">${c.t}</div><ul>${c.items.map(x => `<li>${x}</li>`).join('')}</ul></div>`;
+    return `<div class="vis vs">${col(a)}<div class="vs-mid">vs</div>${col(b)}</div>`;
+  },
+  pairs(list) {
+    return `<div class="vis pairs">${list.map(p => `<div class="pair"><b>${p[0]}</b><span>${p[1]}</span></div>`).join('')}</div>`;
+  },
+  /* Cuadro sinóptico con llaves: raíz { ramas { hojas */
+  sinop(root, br) {
+    const kids = k => `<ul class="sn-kids">${k.map(x => `<li>${x}</li>`).join('')}</ul>`;
+    return `<div class="vis sn-wrap"><div class="sn"><div class="sn-root">${root}</div><div class="sn-brace" aria-hidden="true"></div><div class="sn-list">${br.map(b =>
+      `<div class="sn-br"><div class="sn-bt">${b.t}</div><div class="sn-brace sm" aria-hidden="true"></div>${kids(b.kids)}</div>`).join('')}</div></div></div>`;
+  },
+  tree(root, kids) { return V.sinop(root, kids.map(k => ({ t: k.t, kids: k.s ? [k.s] : [] }))); },
+  book(page, html) {
+    return `<div class="vis bookq"><div class="bookq-h">Lo que dice el libro · pág. ${page}</div><div class="bookq-b">${html}</div></div>`;
+  },
+  now(html) {
+    return `<div class="vis nowbox"><div class="bookq-h">Dato actual · no viene en el libro (es de 2014)</div><div class="bookq-b">${html}</div></div>`;
+  }
+};
+
+
+/* ═══════════ CONTENIDO · Díaz-Aranda, Enrique, Lecciones de derecho penal para el nuevo sistema de justicia en México, UNAM-IIJ, 2014. Segunda parte, Capítulo segundo «Elementos objetivos de la conducta-típica» (págs. 55 a 58). ═══════════ */
+const BOOK = {
+  title: 'Lecciones de derecho penal para el nuevo sistema de justicia en México',
+  author: 'Enrique Díaz-Aranda',
+  pub: 'UNAM, Instituto de Investigaciones Jurídicas · STRAF, 2014',
+  chapter: 'Segunda parte · Capítulo segundo: «Elementos objetivos de la conducta-típica» (págs. 55 a 58)',
+  url: 'http://biblio.juridicas.unam.mx/libros/libro.htm?l=3805'
+};
+const STUDENT = { name: 'Carmen' };
+const CHAP = {
+  n: 7, word: 'siete', short: 'Elementos objetivos', pages: '55 a 58', key: 'carmen-penal-cap7-v1',
+  exA: [0, 2, 4], exB: [1, 3, 5],
+  tourRead: ['La conducta voluntaria desencadenará', 'nexo que une la conducta con el resultado'],
+  tourWord: ['Hay que probar el ', 'nexo causal', '.', 'Nexo causal', 'La unión entre la conducta y el resultado…']
+};
+
+/* ═══════════ ESTACIONES ═══════════ */
+const LESSONS = [];
+
+LESSONS.push({
+  id: 'puente', icon: '🧭', era: 'Antes de empezar', title: 'Lo que ya sabes', pages: '53–54', mins: 8, bridge: true,
+  goal: 'Recordar los tres elementos de la conducta-típica: hoy estudias el primero, el objetivo.',
+  steps: [
+    { h: 'Imagina que…', t: 'En el capítulo anterior viste los tres vasos comunicantes: elementos <b>objetivos</b>, <b>normativos</b> y <b>subjetivos</b>. Hoy llenas el primer vaso: el <mark>elemento objetivo</mark>, que es lo que se puede ver y probar de una conducta.' },
+    { h: '¿Cuál pesa más?', t: 'Recuerda la regla del capítulo anterior:',
+      v: () => V.tbl(['Conducta', 'Elemento que pesa más'], [['Acción', '<b>Objetivo</b> (este capítulo)'], ['Omisión', 'Normativo'], ['Tentativa', 'Subjetivo']]) },
+    { h: 'El mapa de este capítulo', t: 'Son solo 4 páginas (55 a 58):',
+      v: () => V.flow([{ t: 'El elemento objetivo y la voluntad', s: '¿Cómo lo hizo? · págs. 55–56' }, { t: 'El nexo causal', s: '¿Su conducta causó el resultado? · págs. 56–57' }, { t: 'El caso Rubí', s: 'Cuando el nexo causal no se prueba · págs. 57–58' }, { t: 'Los límites del nexo causal', s: 'Pág. 58' }]) }
+  ],
+  sinop: { root: 'Lo que ya sabes', br: [
+    { t: 'Tres elementos', kids: ['Objetivos', 'Normativos', 'Subjetivos'] },
+    { t: 'Pesa más', kids: ['Acción: objetivo', 'Omisión: normativo', 'Tentativa: subjetivo'] },
+    { t: 'Hoy', kids: ['Voluntad', 'Nexo causal'] }] },
+  trap: ['En la <b>acción</b> pesa más el elemento <b>objetivo</b>.'],
+  trick: '<b>«AO, ON, TS»</b>: acción-objetivo, omisión-normativo, tentativa-subjetivo.',
+  explain: { q: '¿Cuáles son los tres elementos de la conducta-típica y cuál estudias hoy?', model: 'Objetivos, normativos y subjetivos, como tres vasos comunicantes. Hoy estudio el objetivo, que pesa más en las conductas de acción, y tiene dos partes: la voluntad y el nexo causal.', keys: ['Objetivos, normativos, subjetivos', 'Acción: pesa más el objetivo', 'Voluntad y nexo causal'] }
+});
+
+LESSONS.push({
+  id: 'voluntad', icon: '💪', era: 'Elementos objetivos · I. Voluntad', title: 'Lo que se ve y la voluntad', pages: '55–56', mins: 10,
+  goal: 'Entender qué es el elemento objetivo, qué es la voluntad y por qué se pregunta «¿cómo lo hizo?» y no «¿por qué lo hizo?».',
+  steps: [
+    { h: 'Imagina que…', t: 'Si ves a alguien tomar una cartera ajena y guardársela, lo puedes <b>ver</b>, <b>oír</b> y hasta grabar. Eso es lo objetivo: lo que pasa afuera y se percibe con los sentidos. El <mark>elemento objetivo</mark> es el más importante en las conductas de <b>acción</b> y de <b>resultado</b>.' },
+    { h: 'Verbos y resultados', t: 'La ley describe estas conductas con <b>verbos de acción</b>, y el resultado es un <b>cambio externo</b> que se percibe con los sentidos (vista, oído, olfato, tacto y gusto):',
+      v: () => V.tbl(['Verbo del tipo', 'Artículo del CPF', 'Resultado'], [['Privar (de la vida)', '302 · homicidio', 'Muerte'], ['Inferir (una lesión)', '289 · lesiones', 'Lesión'], ['Apoderarse', '367 · robo', 'Pérdida del dominio de la cosa']]) },
+    { h: 'Dos preguntas por resolver', t: 'En los elementos objetivos hay que resolver dos cosas:',
+      v: () => V.flow([{ t: 'La voluntad', s: '¿La persona dominaba su cuerpo?' }, { t: 'El nexo causal', s: '¿Su conducta causó el resultado? (siguiente estación)' }]) },
+    { h: '¿Qué es la voluntad?', t: 'La conducta debe ser <b>voluntaria</b>: la persona debe poder dominar su cuerpo. El libro la define como la <mark>«capacidad para autodeterminar libremente nuestros movimientos corporales»</mark>. Si no hay voluntad, se excluye el elemento objetivo (lo verás más adelante).' },
+    { h: '¿Cómo o por qué?', t: 'El análisis de la voluntad es <b>físico-objetivo</b>. No hay que confundirlo con el subjetivo:',
+      v: () => V.vs({ t: 'Voluntad (objetivo)', items: ['Pregunta: <b>¿cómo lo hizo?</b>', 'Ejemplo: ¿se levantó y caminó con sus propias fuerzas, dueño de su cuerpo?'] }, { t: 'Elemento subjetivo', items: ['Pregunta: <b>¿por qué o para qué lo hizo?</b>', 'Ejemplo: ¿se levantó para ir al cine o al parque?'] }) }
+  ],
+  sinop: { root: 'Elemento objetivo', br: [
+    { t: 'Dónde pesa', kids: ['Conductas de acción', 'Conductas de resultado'] },
+    { t: 'Cómo se ve', kids: ['Verbos de acción: privar, inferir, apoderarse', 'Cambio externo', 'Se percibe con los sentidos'] },
+    { t: 'Voluntad', kids: ['Dominar el propio cuerpo', '¿Cómo lo hizo?'] },
+    { t: 'No confundir', kids: ['¿Por qué lo hizo? es subjetivo', 'Confundirlo lleva a resoluciones injustas'] }] },
+  trap: ['La voluntad responde <b>¿cómo lo hizo?</b>; el <b>¿por qué?</b> es del elemento subjetivo.', 'Robo = «apoderarse» (art. 367); lesiones = «inferir» (art. 289).'],
+  trick: '<b>«Voluntad = volante»</b>: ¿quien manejaba su cuerpo era la propia persona?',
+  explain: { q: '¿Qué es la voluntad y qué pregunta responde?', model: 'En las conductas de acción y de resultado lo más importante es el elemento objetivo, porque la ley usa verbos de acción (privar, inferir, apoderarse) y el resultado es un cambio externo que se percibe con los sentidos. Hay que resolver la voluntad y el nexo causal. La voluntad es la capacidad para autodeterminar libremente nuestros movimientos corporales, es decir, dominar el propio cuerpo. Su análisis es físico-objetivo y responde ¿cómo lo hizo?; el ¿por qué lo hizo? corresponde al elemento subjetivo.', keys: ['Acción y resultado', 'Verbos y cambio externo', 'Voluntad y nexo causal', 'Dominar el propio cuerpo', '¿Cómo lo hizo?'] }
+});
+
+LESSONS.push({
+  id: 'nexo', icon: '🔗', era: 'Elementos objetivos · II. Nexo causal', title: 'La cadena de causas', pages: '56–57', mins: 12,
+  goal: 'Entender qué es el nexo causal, por qué los testigos no bastan y por qué se necesitan pruebas científicas.',
+  steps: [
+    { h: 'Imagina que…', t: 'Empujas la primera ficha de dominó y cae la última. Entre las dos hubo una <b>cadena</b>: cada ficha tiró a la siguiente. Eso es el <mark>nexo causal</mark>: la unión entre la conducta y el resultado.' },
+    { h: 'El ejemplo de Gaudencio', t: 'Gaudencio dispara a Maclovio. Mira la cadena:',
+      v: () => V.flow([{ t: 'Gaudencio jala el gatillo', s: 'La conducta voluntaria' }, { t: 'El martillo golpea la bala', s: 'Se percute' }, { t: 'La bala sale por el cañón con velocidad' }, { t: 'Impacta en el corazón de Maclovio' }, { t: 'Maclovio muere', s: 'El resultado del homicidio (art. 302)' }]) },
+    { h: 'Los sentidos pueden engañar', t: 'Unos testigos vieron a Gaudencio apuntar y disparar, y vieron caer a Maclovio. Eso es un <b>indicio</b>. Pero ¿y si Gaudencio falló y en ese mismo momento <b>Teófilo</b>, escondido, hizo el disparo que de verdad lo mató? <mark>Por eso se necesitan peritos</mark>.',
+      v: () => V.pairs([['Médico forense', 'Hace la autopsia y dice la causa de la muerte'], ['Criminalista', 'Con pruebas científicas dice cómo, cuándo, dónde, quién y en qué circunstancias: si disparó, la trayectoria de la bala, la posición de víctima y victimario']]) },
+    { h: '«La causa de la causa…»', t: 'La teoría causalista lo resume así: <mark>«la causa de la causa es la causa de lo causado»</mark>. También se llama <b>condicio sine qua non</b>. No basta probar que disparó: hay que probar que <b>esa bala</b> siguió esa trayectoria, lesionó un órgano y causó la muerte. Si no hay pruebas científicas, hay <b>duda</b>, y por el <b>in dubio pro reo</b> (art. 402 del CNPP) el acusado puede ser absuelto.' },
+    { h: 'Dos momentos del proceso', t: '',
+      v: () => V.vs({ t: 'Auto de vinculación a proceso', items: ['Bastan datos que hagan <b>probable</b> la responsabilidad (art. 316, fr. III, del CNPP)', 'Pueden bastar testigos u otros indicios'] }, { t: 'Sentencia condenatoria', items: ['Se necesitan <b>pruebas científicas</b> en el juicio oral', 'Que demuestren sin lugar a dudas que el acusado causó el resultado'] }) }
+  ],
+  sinop: { root: 'Nexo causal', br: [
+    { t: 'Qué es', kids: ['Unión entre conducta y resultado', 'Cadena de causas'] },
+    { t: 'Cómo se prueba', kids: ['Sentidos y testigos: indicios', 'Peritos: forense y criminalista', 'Pruebas científico-naturales'] },
+    { t: 'Teoría', kids: ['«La causa de la causa es la causa de lo causado»', 'Condicio sine qua non'] },
+    { t: 'Proceso', kids: ['Vinculación: datos probables', 'Condena: pruebas científicas', 'Si hay duda: in dubio pro reo'] }] },
+  trap: ['Los testigos dan <b>indicios</b>; para condenar se necesitan <b>pruebas científicas</b>.', 'Para la <b>vinculación a proceso</b> bastan datos probables; para la <b>condena</b>, no.', 'Condicio sine qua non = teoría <b>causalista</b>.'],
+  trick: '<b>«Dominó»</b>: hay que probar que cada ficha tiró a la siguiente, desde el gatillo hasta la muerte.',
+  explain: { q: '¿Qué es el nexo causal y cómo se prueba?', model: 'Es la relación que une la conducta con el resultado: la conducta voluntaria desencadena una cadena de causas hasta el resultado del tipo, como cuando Gaudencio dispara y Maclovio muere. Los testigos que vieron el hecho son indicios, pero los sentidos pueden engañar (podría haber disparado Teófilo). Por eso se necesitan peritos, como el médico forense y el criminalista, con pruebas científico-naturales. La teoría causalista lo resume en «la causa de la causa es la causa de lo causado» (condicio sine qua non). Para vincular a proceso bastan datos probables, pero para condenar se necesitan pruebas científicas; si hay duda, se aplica el in dubio pro reo.', keys: ['Une conducta y resultado', 'Cadena de causas', 'Testigos = indicios', 'Peritos y pruebas científicas', 'Condicio sine qua non', 'Vinculación vs. condena', 'In dubio pro reo'] }
+});
+
+LESSONS.push({
+  id: 'rubi', icon: '⚖️', era: 'Elementos objetivos · Un caso real', title: 'El caso Rubí', pages: '57–58', mins: 10,
+  goal: 'Aplicar el nexo causal al caso Rubí (Ciudad Juárez, 2008) tal como lo analiza el autor.',
+  steps: [
+    { h: 'Antes de empezar', t: 'Este es un caso real y doloroso: la muerte de una joven, Rubí, en <b>Ciudad Juárez en 2008</b>. El libro lo usa con respeto para explicar qué pasa cuando la fiscalía <mark>no prueba el nexo causal</mark>. Como el libro, usamos solo las iniciales de los apellidos.' },
+    { h: 'Lo que se probó y lo que no', t: '',
+      v: () => V.vs({ t: 'Lo que sí había', items: ['Indicios contra Sergio Rafael B. B.', 'Peritos que confirmaron golpes en el cráneo de los restos de Rubí F. E.'] }, { t: 'Lo que no se probó', items: ['Científicamente, que <b>él</b> la mató (podía ser su hermano u otra persona)', 'Si la causa de la muerte fueron los golpes o las quemaduras', 'En pocas palabras: <b>el nexo causal</b>'] }) },
+    { h: 'Testigos y «confesión»', t: 'Además, la acusación tenía otros problemas:',
+      v: () => V.pairs([['Testigos de oídas', 'Solo habían escuchado decir cosas, y se contradecían: uno dijo «a balazos» y otro que «la aventó al piso»'], ['La supuesta confesión', 'En el juicio, el acusado pidió perdón a la madre, pero nunca dijo cómo, cuándo, dónde ni en qué circunstancias'], ['La decisión', 'El tribunal de juicio oral lo absolvió. Después, los magistrados revocaron ese fallo']]) },
+    { h: 'La opinión del autor', t: 'Para el autor, el tribunal <b>debía absolver</b>: condenar habría violado la <b>defensa</b>, la <b>presunción de inocencia</b> y el <b>debido proceso</b>, porque solo se podría sostener con pruebas ilícitas. Por eso dice que no entiende por qué se revocó el fallo. <mark>Sin nexo causal probado científicamente, no se debe condenar</mark>.',
+      v: () => V.book('58', 'Los sentidos sirven a los testigos para describir hechos, pero <b>no bastan</b> para probar la relación causal. En el juicio oral se necesitan <b>pruebas científicas de expertos</b> (médicos, contadores, arquitectos, mecánicos…) que no dejen dudas.') }
+  ],
+  sinop: { root: 'Caso Rubí', br: [
+    { t: 'Hechos', kids: ['Ciudad Juárez, 2008', 'Indicios contra Sergio Rafael B. B.'] },
+    { t: 'Faltó probar', kids: ['Que él la mató', 'La causa de la muerte', 'El nexo causal'] },
+    { t: 'Pruebas débiles', kids: ['Testigos de oídas que se contradicen', 'Pedir perdón no es confesar'] },
+    { t: 'Para el autor', kids: ['Había que absolver', 'Defensa, presunción de inocencia, debido proceso'] }] },
+  trap: ['Pedir perdón <b>no</b> es una confesión de cómo pasó el hecho.', 'El tribunal de juicio oral <b>absolvió</b>; después los magistrados <b>revocaron</b> el fallo. El autor critica la revocación.', 'Los testigos eran <b>de oídas</b>: no vieron el hecho.'],
+  trick: '<b>«Sin cadena no hay condena»</b>.',
+  explain: { q: '¿Qué enseña el caso Rubí sobre el nexo causal?', model: 'Que sin nexo causal probado científicamente no se debe condenar. Había indicios contra Sergio Rafael B. B. y los peritos confirmaron golpes, pero la fiscalía no probó que él la mató (pudo ser otra persona) ni si la causa de la muerte fueron los golpes o las quemaduras. Los testigos eran de oídas y se contradecían, y en el juicio el acusado solo pidió perdón, sin decir cómo pasó. El tribunal lo absolvió y, para el autor, hizo bien, porque condenar habría violado la defensa, la presunción de inocencia y el debido proceso.', keys: ['No se probó el nexo causal', 'Pudo ser otra persona', '¿Golpes o quemaduras?', 'Testigos de oídas', 'Pedir perdón no es confesar', 'Presunción de inocencia'] }
+});
+
+LESSONS.push({
+  id: 'limites', icon: '❓', era: 'Elementos objetivos · Cierre', title: 'Cuando la cadena no alcanza', pages: '58', mins: 8,
+  goal: 'Ver los problemas del nexo causal y por qué solo es un primer indicio.',
+  steps: [
+    { h: 'Imagina que…', t: 'Si sigues la cadena de causas hacia atrás, ¿dónde paras? ¿En quien disparó, en quien fabricó la pistola, en quien vendió las balas? La cadena causal puede ser <b>infinita</b>. Por eso el nexo causal tiene límites.' },
+    { h: 'Tres preguntas difíciles', t: 'El libro plantea problemas con el homicidio:',
+      v: () => V.flow([{ t: '¿Cuál es la causa inicial?', s: '¿Quien disparó o quien construyó el arma?' }, { t: '¿Hasta dónde llegan los resultados?', s: 'La bala solo lesionó levemente, pero la víctima no quiso atención médica y murió: ¿responde quien disparó, el médico o ninguno?' }, { t: '¿Qué pasa si la conducta no causó el resultado?' }]) },
+    { h: 'La respuesta: los elementos normativos', t: 'En los elementos objetivos solo se determina <b>qué conducta</b> se hizo y <b>qué resultado</b> pasó. Para resolver estos problemas hay que ir a los <b>elementos normativos jurídicos implícitos</b> (siguiente capítulo). <mark>El nexo causal es un primer indicio, pero no siempre es el único</mark>.' }
+  ],
+  sinop: { root: 'Límites del nexo', br: [
+    { t: 'Problemas', kids: ['¿Causa inicial?', '¿Hasta dónde?', '¿Y si no causó?'] },
+    { t: 'Ejemplos', kids: ['¿Tirador o fabricante del arma?', 'Víctima que rechaza la atención médica'] },
+    { t: 'Respuesta', kids: ['Elementos normativos jurídicos implícitos'] },
+    { t: 'Resumen', kids: ['Se percibe con los sentidos', 'Se demuestra científicamente', 'Es un primer indicio'] }] },
+  trap: ['El nexo causal <b>no</b> resuelve todo: es solo un <b>primer indicio</b>.', 'La solución está en los elementos <b>normativos</b> jurídicos implícitos.'],
+  trick: '<b>«La cadena empieza, la norma decide»</b>.',
+  explain: { q: '¿Por qué el nexo causal no siempre basta?', model: 'Porque la cadena causal puede presentar problemas: cuál es la causa inicial (quien disparó o quien fabricó el arma), hasta dónde llegan los resultados (si la víctima rechaza la atención médica) y qué pasa si la conducta no causó el resultado. Los elementos objetivos solo dicen qué conducta se hizo y qué resultado pasó; la respuesta está en los elementos normativos jurídicos implícitos. El nexo causal es un primer indicio, no siempre el único.', keys: ['Causa inicial', 'Hasta dónde', 'Fabricante del arma', 'Víctima sin atención médica', 'Elementos normativos', 'Primer indicio'] }
+});
+
+/* ═══════════ LECTURA GUIADA ═══════════ */
+const READING = {
+  puente: [
+    { p: '54', start: 'Así, en los delitos de acción tendrá mucha mayor importancia', end: 'Comencemos con el desarrollo del elemento objetivo.', look: '¿Qué elemento pesa más en la acción?', ans: 'El <b>objetivo</b>. En la omisión, el normativo; en la tentativa, el subjetivo.', tip: 'Es la última página del capítulo anterior.' }
+  ],
+  voluntad: [
+    { p: '55', start: 'El elemento objetivo es el más importante', end: 'voluntad y nexo causal entre el resultado y la conducta.', look: '¿En qué conductas es más importante el elemento objetivo? ¿Qué dos cuestiones hay que resolver?', ans: 'En las de <b>acción y de resultado</b>. Hay que resolver la <b>voluntad</b> y el <b>nexo causal</b>.' },
+    { p: '55–56', start: 'La conducta debe ser voluntaria', end: 'lo cual analizaremos más adelante.', look: '¿Cómo define el libro la voluntad? ¿Qué pregunta responde?', ans: '<b>«Capacidad para autodeterminar libremente nuestros movimientos corporales»</b>. Responde <b>¿cómo lo hizo?</b>; el ¿por qué? es del elemento subjetivo.', tip: 'Empieza en la 55 y termina arriba de la 56.' }
+  ],
+  nexo: [
+    { p: '56', start: 'La conducta voluntaria desencadenará', end: 'nexo que une la conducta con el resultado.', look: '¿Qué es el nexo causal? Sigue la cadena del ejemplo de Gaudencio.', ans: 'La <b>relación que une la conducta con el resultado</b>: gatillo → martillo → bala → impacto → muerte.' },
+    { p: '56–57', start: 'La relación causal puede establecerse a través de nuestros sentidos', end: 'sino Teófilo!', look: '¿Por qué no bastan los testigos? ¿Qué peritos se necesitan?', ans: 'Porque los sentidos <b>pueden engañar</b> (pudo disparar Teófilo). Se necesitan el <b>médico forense</b> (autopsia) y el <b>criminalista</b>.', tip: 'Sáltate la nota 94 con la dirección de internet.' },
+    { p: '57', start: 'Conforme a lo anterior, con los elementos objetivos', end: 'privó de la vida a la víctima.', look: '¿Cómo resume la teoría causalista el nexo? ¿Qué se necesita para vincular y qué para condenar?', ans: '<b>«La causa de la causa es la causa de lo causado»</b> (condicio sine qua non). Para vincular bastan <b>datos probables</b>; para condenar, <b>pruebas científicas</b>.' }
+  ],
+  rubi: [
+    { p: '57–58', start: 'Todo lo expuesto nos puede acercar a una explicación', end: 'para revocar posteriormente el fallo.', look: '¿Qué no probó el fiscal? ¿Qué opina el autor de la absolución?', ans: 'No probó científicamente el <b>nexo causal</b>: que él la mató ni la causa de la muerte. El autor opina que el tribunal <b>debía absolver</b>.', tip: 'Es un caso real y triste. Empieza abajo de la 57 y sigue en la 58. Sáltate la nota 95 (un enlace).' },
+    { p: '58', start: 'Conforme a lo expuesto, aunque los sentidos', end: 'y condenar al responsable del delito.', look: '¿Qué pruebas se necesitan en el juicio oral?', ans: '<b>Pruebas científicas de expertos</b> (médicos, contadores, arquitectos, mecánicos) que no dejen duda de cómo, cuándo, dónde, quién y en qué circunstancias.' }
+  ],
+  limites: [
+    { p: '58', start: 'Por último, la unión entre la conducta y el resultado', end: 'pero no siempre es el único.', look: '¿Qué problemas puede tener el nexo causal? ¿Dónde está la solución?', ans: '¿Cuál es la causa inicial?, ¿hasta dónde llegan los resultados?, ¿qué pasa si no causó el resultado? La solución está en los <b>elementos normativos jurídicos implícitos</b>.' }
+  ]
+};
+
+/* ═══════════ CASOS ═══════════ */
+const CASES = {
+  puente: [
+    { s: 'Alguien empuja a otra persona por la escalera.', q: '¿Es acción u omisión? ¿Qué elemento pesa más?', a: 'Es una <b>acción</b>, así que pesa más el elemento <b>objetivo</b>: lo que se ve que hizo.' }
+  ],
+  voluntad: [
+    { s: 'Dos personas se levantan de su silla. Una lo hizo para ir al baño; la otra porque alguien la jaló de los brazos con fuerza.', q: '¿Qué pregunta responde el análisis de la voluntad en cada caso?', a: '<b>¿Cómo lo hizo?</b> La primera se movió con sus propias fuerzas (hay voluntad). La segunda no dominaba su cuerpo en ese momento. El «para ir al baño» es del elemento subjetivo.' },
+    { s: 'Un señor toma una cartera que no es suya y se la guarda en el bolsillo.', q: '¿Qué verbo del tipo y qué resultado se ven?', a: 'El verbo <b>apoderarse</b> (robo, art. 367) y el resultado: la <b>pérdida del dominio</b> de la cartera para su dueño.' }
+  ],
+  nexo: [
+    { s: 'Varios vecinos dicen que vieron a Raúl disparar y caer a la víctima. No hay autopsia ni peritaje del arma.', q: '¿Alcanza para condenar a Raúl?', a: 'No. Los testigos son <b>indicios</b> y los sentidos pueden engañar. Para condenar se necesitan <b>pruebas científicas</b> (autopsia, criminalística). Con duda, se aplica el <b>in dubio pro reo</b>.' },
+    { s: 'Con esos mismos testigos, el fiscal pide al juez el auto de vinculación a proceso.', q: '¿Puede dictarse?', a: 'Puede ser: para la <b>vinculación a proceso</b> bastan datos que hagan <b>probable</b> la responsabilidad (art. 316, fr. III, del CNPP). Para la condena, no.' }
+  ],
+  rubi: [
+    { s: 'En un juicio, el acusado llora y le pide perdón a la familia de la víctima, pero no dice qué pasó.', q: '¿Eso es una confesión que pruebe el nexo causal?', a: 'No. Como en el caso Rubí, pedir perdón <b>no explica</b> cómo, cuándo, dónde ni en qué circunstancias pasó el hecho.' },
+    { s: 'Dos testigos dicen haber escuchado al acusado contar el crimen, pero cada uno cuenta una forma distinta.', q: '¿Qué problema tienen esas pruebas?', a: 'Son testigos <b>de oídas</b> (no vieron el hecho) y además <b>se contradicen</b>.' }
+  ],
+  limites: [
+    { s: 'A Luis le dan un golpe leve en el brazo. Le ofrecen atención médica, la rechaza, se infecta y muere semanas después.', q: '¿El nexo causal resuelve solo quién responde por la muerte?', a: 'No. Es uno de los problemas del libro: ¿hasta dónde llegan los resultados? Se resuelve en los <b>elementos normativos jurídicos implícitos</b>.' }
+  ]
+};
+
+/* ═══════════ GUIONES DE VOZ ═══════════ */
+const EXPLAIN = {
+  puente: [
+    'Carmen, en el capítulo anterior viste los tres vasos comunicantes: los elementos objetivos, normativos y subjetivos. Hoy vas a llenar el primer vaso: el elemento objetivo. Es lo que se puede ver y probar de una conducta. Quédate con esto: hoy toca el elemento objetivo.',
+    'Recuerda la tabla. En las conductas de acción pesa más el elemento objetivo. En las de omisión pesa más el normativo. Y en la tentativa pesa más el subjetivo. Por eso el objetivo es tan importante: casi todos los delitos están escritos como acciones. Quédate con esto: acción, objetivo.',
+    'Mira el mapa. Son solo cuatro páginas, de la cincuenta y cinco a la cincuenta y ocho. Primero, el elemento objetivo y la voluntad. Luego, el nexo causal, que es la cadena entre lo que hizo la persona y el resultado. Después, un caso real, el caso Rubí. Y al final, los límites del nexo causal. Quédate con esto: voluntad y nexo causal.',
+    'Este es tu cuadro sinóptico. En el centro: lo que ya sabes. Primera rama, los tres elementos: objetivos, normativos y subjetivos. Segunda rama, cuál pesa más: en la acción el objetivo, en la omisión el normativo y en la tentativa el subjetivo. Tercera rama, lo que verás hoy: la voluntad y el nexo causal. Truco: a o, o ene, te ese.'
+  ],
+  voluntad: [
+    'Carmen, si ves a alguien tomar una cartera ajena y guardársela, lo puedes ver, lo puedes oír y hasta lo puedes grabar con tu celular. Eso es lo objetivo: lo que pasa afuera y se percibe con los sentidos. El elemento objetivo es el más importante en las conductas de acción y de resultado. Quédate con esto: objetivo es lo que se ve.',
+    'Mira la tabla. La ley describe estas conductas con verbos de acción. En el homicidio, artículo trescientos dos, el verbo es privar de la vida, y el resultado es la muerte. En las lesiones, artículo doscientos ochenta y nueve, el verbo es inferir una lesión, y el resultado es la lesión. En el robo, artículo trescientos sesenta y siete, el verbo es apoderarse, y el resultado es que el dueño pierde el dominio de su cosa. Todo eso se percibe con los sentidos: la vista, el oído, el olfato, el tacto y el gusto. Quédate con esto: verbos de acción y cambios que se ven.',
+    'En el elemento objetivo hay que resolver dos preguntas. Primera: la voluntad, es decir, si la persona dominaba su cuerpo. Segunda: el nexo causal, es decir, si su conducta causó el resultado. La segunda la verás en la siguiente estación. Quédate con esto: voluntad y nexo causal.',
+    'La conducta tiene que ser voluntaria. Eso quiere decir que la persona debe poder dominar su cuerpo. El libro define la voluntad como la capacidad para autodeterminar libremente nuestros movimientos corporales. Dicho fácil: que tú seas quien maneja tu cuerpo, como quien maneja el volante de un coche. Si no hay voluntad, se excluye el elemento objetivo, y eso lo verás más adelante. Quédate con esto: voluntad es dominar tu propio cuerpo.',
+    'Ahora una diferencia muy importante. El análisis de la voluntad responde la pregunta: ¿cómo lo hizo? Por ejemplo, si alguien se levanta y camina, la voluntad pregunta: ¿se levantó con sus propias fuerzas, siendo dueño de su cuerpo? En cambio, la pregunta ¿para qué lo hizo?, por ejemplo, para ir al cine o al parque, le toca al elemento subjetivo. El autor dice que confundir estas preguntas lleva a investigaciones inservibles y a resoluciones injustas. Quédate con esto: la voluntad pregunta cómo, no por qué.',
+    'Este es tu cuadro sinóptico. En el centro: el elemento objetivo. Primera rama, dónde pesa: en las conductas de acción y de resultado. Segunda rama, cómo se ve: verbos de acción como privar, inferir y apoderarse, con un cambio externo que se percibe con los sentidos. Tercera rama, la voluntad: dominar el propio cuerpo, y responde cómo lo hizo. Cuarta rama, no confundir: el por qué es del elemento subjetivo. Truco: voluntad, como volante.'
+  ],
+  nexo: [
+    'Carmen, piensa en el dominó. Empujas la primera ficha y cae la última. Entre las dos hubo una cadena: cada ficha tiró a la siguiente. Eso es el nexo causal: la unión entre la conducta y el resultado. Quédate con esto: nexo causal es la cadena que une lo que hiciste con lo que pasó.',
+    'Mira el ejemplo del libro. Gaudencio jala el gatillo; esa es la conducta voluntaria. Eso hace que el martillo golpee la bala. La bala sale por el cañón con velocidad. Impacta en el corazón de Maclovio. Y Maclovio muere. Todo empezó con la conducta de Gaudencio y terminó con el resultado de muerte que describe el artículo trescientos dos: el homicidio. Quédate con esto: del gatillo a la muerte hay una cadena de causas.',
+    'Unos testigos vieron a Gaudencio apuntar, oyeron el disparo y vieron caer a Maclovio. Eso es un indicio. Pero los sentidos nos pueden engañar. ¿Y si Gaudencio falló, y en ese mismo momento Teófilo, escondido, hizo el disparo que de verdad lo mató? Por eso se necesitan peritos: el médico forense, que hace la autopsia y dice la causa de la muerte; y el criminalista, que con pruebas científicas dice cómo, cuándo, dónde, quién y en qué circunstancias pasó. Quédate con esto: los testigos dan indicios; los peritos dan pruebas.',
+    'La teoría causalista lo resume en una frase: la causa de la causa es la causa de lo causado. También se le llama condicio sine qua non, que es latín y quiere decir condición sin la cual no. No basta con probar que la persona disparó: hay que probar que esa bala siguió esa trayectoria, lesionó un órgano importante y causó la muerte. Si no hay pruebas científicas, hay duda; y con duda se aplica el in dubio pro reo: a favor del acusado. Quédate con esto: hay que probar toda la cadena.',
+    'Mira el cuadro comparativo. Para el auto de vinculación a proceso, que viste en el capítulo cinco, bastan datos que hagan probable la responsabilidad; pueden bastar testigos u otros indicios. Pero para una sentencia condenatoria se necesitan pruebas científicas presentadas en el juicio oral, que demuestren sin lugar a dudas que el acusado causó el resultado. Quédate con esto: para vincular basta lo probable; para condenar se necesita certeza.',
+    'Este es tu cuadro sinóptico. En el centro: el nexo causal. Primera rama, qué es: la unión entre la conducta y el resultado, una cadena de causas. Segunda rama, cómo se prueba: los sentidos y los testigos son indicios; los peritos, como el forense y el criminalista, dan pruebas científicas. Tercera rama, la teoría: la causa de la causa es la causa de lo causado, o condicio sine qua non. Cuarta rama, el proceso: para vincular bastan datos probables, para condenar pruebas científicas, y si hay duda, in dubio pro reo. Truco: el dominó.'
+  ],
+  rubi: [
+    'Carmen, este es un caso real y muy triste: la muerte de una joven llamada Rubí, en Ciudad Juárez, en dos mil ocho. El libro lo usa con mucho respeto para explicar qué pasa cuando la fiscalía no prueba el nexo causal. Igual que el libro, usamos solo las iniciales de los apellidos. Quédate con esto: el caso muestra la importancia de probar la cadena causal.',
+    'Mira el cuadro comparativo. Lo que sí había: indicios contra el acusado, Sergio Rafael, y peritos que confirmaron que los restos de Rubí tenían golpes en el cráneo. Lo que no se probó: que fue él quien la mató, porque también pudo ser su hermano u otra persona; y si la causa de la muerte fueron los golpes o las quemaduras. En pocas palabras, nunca se probó científicamente el nexo causal. Quédate con esto: había indicios, pero no la cadena probada.',
+    'La acusación tenía otros problemas. Los testigos eran de oídas, es decir, no vieron nada; solo escucharon decir cosas, y además se contradecían: uno dijo que había sido a balazos y otro que la aventó al piso. También se habló de una confesión, pero en el juicio el acusado solo le pidió perdón a la madre de Rubí, sin decir cómo, cuándo, dónde ni en qué circunstancias. El tribunal de juicio oral lo absolvió, y después unos magistrados revocaron esa decisión. Quédate con esto: pedir perdón no es probar cómo pasó.',
+    'Esta es la opinión del autor. Para él, el tribunal debía absolver, porque condenar sin pruebas habría violado el derecho de defensa, la presunción de inocencia y el debido proceso. Por eso dice que no entiende por qué se revocó la absolución. Y concluye: los testigos pueden describir lo que vieron, pero para probar el nexo causal en el juicio oral se necesitan pruebas científicas de expertos, como médicos, contadores, arquitectos o mecánicos, que no dejen dudas. Quédate con esto: sin cadena probada, no hay condena.',
+    'Este es tu cuadro sinóptico. En el centro: el caso Rubí. Primera rama, los hechos: Ciudad Juárez, dos mil ocho, con indicios contra Sergio Rafael. Segunda rama, lo que faltó probar: que él la mató, la causa de la muerte y el nexo causal. Tercera rama, las pruebas débiles: testigos de oídas que se contradecían, y pedir perdón no es confesar. Cuarta rama, la opinión del autor: había que absolver, por la defensa, la presunción de inocencia y el debido proceso. Truco: sin cadena no hay condena.'
+  ],
+  limites: [
+    'Carmen, si sigues la cadena de causas hacia atrás, ¿dónde te detienes? ¿En quien disparó, en quien fabricó la pistola, en quien vendió las balas? La cadena podría no terminar nunca. Por eso el nexo causal tiene límites. Quédate con esto: la cadena causal sola no siempre alcanza.',
+    'El libro plantea tres preguntas difíciles. Primera: ¿cuál es la causa inicial?, ¿quien disparó o quien construyó el arma? Segunda: ¿hasta dónde llegan los resultados? Por ejemplo, si la bala solo hirió un poco, la víctima no quiso atención médica y murió, ¿responde quien disparó, el médico o ninguno? Tercera: ¿qué pasa si la conducta no causó el resultado? Quédate con esto: causa inicial, hasta dónde, y si no causó.',
+    'La respuesta del libro es esta. En los elementos objetivos solo podemos saber qué conducta se hizo y qué resultado pasó. Para resolver estos problemas hay que ir a los elementos normativos jurídicos implícitos, que vas a ver en el siguiente capítulo. Y el resumen: los elementos objetivos se perciben con los sentidos y se demuestran científicamente; el nexo causal es un primer indicio, pero no siempre es el único. Quédate con esto: la cadena empieza, la norma decide.',
+    'Este es tu cuadro sinóptico. En el centro: los límites del nexo. Primera rama, los problemas: cuál es la causa inicial, hasta dónde llegan los resultados y qué pasa si la conducta no causó el resultado. Segunda rama, los ejemplos: el tirador o el fabricante del arma, y la víctima que rechaza la atención médica. Tercera rama, la respuesta: los elementos normativos jurídicos implícitos. Cuarta rama, el resumen: se percibe con los sentidos, se demuestra científicamente y es un primer indicio. Truco: la cadena empieza, la norma decide.'
+  ]
+};
+
+const AUDIO = {
+  puente: 'Resumen corto. La conducta típica tiene tres elementos: objetivos, normativos y subjetivos. En la acción pesa más el objetivo. Hoy estudias el objetivo, con dos partes: la voluntad y el nexo causal.',
+  voluntad: 'Resumen corto. El elemento objetivo es lo que se ve: verbos de acción como privar, inferir o apoderarse, y un cambio externo. La voluntad es la capacidad de dominar tu propio cuerpo, y responde cómo lo hizo. El por qué lo hizo es del elemento subjetivo.',
+  nexo: 'Resumen corto. El nexo causal es la cadena que une la conducta con el resultado, como el disparo de Gaudencio y la muerte de Maclovio. Los testigos son indicios; se necesitan peritos y pruebas científicas. La causa de la causa es la causa de lo causado. Para vincular bastan datos probables; para condenar, pruebas científicas.',
+  rubi: 'Resumen corto. En el caso Rubí, de Ciudad Juárez en dos mil ocho, la fiscalía no probó científicamente el nexo causal: ni que el acusado la mató ni la causa de la muerte. Los testigos eran de oídas y pedir perdón no es confesar. Para el autor, había que absolver.',
+  limites: 'Resumen corto. El nexo causal tiene problemas: cuál es la causa inicial, hasta dónde llegan los resultados y qué pasa si la conducta no causó el resultado. Se resuelven con los elementos normativos. El nexo causal es un primer indicio, no siempre el único.'
+};
+
+/* ═══════════ BANCO DE PREGUNTAS ═══════════ */
+const BANK = [];
+function Q(t, q, o, a, e, p) { BANK.push({ id: 'q' + (BANK.length + 1), t, q, o, a, e, p }); }
+
+Q('puente', 'En las conductas de acción pesa más el elemento:', ['Objetivo', 'Normativo', 'Subjetivo', 'Procesal'], 0, 'Es el tema de este capítulo.', '54');
+Q('puente', 'Los tres elementos de la conducta-típica son:', ['Objetivos, normativos y subjetivos', 'Voluntad, nexo y resultado', 'Dolo, culpa y error', 'Acción, omisión y tentativa'], 0, 'Como tres vasos comunicantes.', '53');
+Q('puente', 'Las dos cuestiones del elemento objetivo son:', ['Dolo y culpa', 'Voluntad y nexo causal', 'Lesión y peligro', 'Juez y fiscal'], 1, 'Se estudian en este capítulo.', '55');
+Q('puente', 'En la omisión pesa más el elemento:', ['Objetivo', 'Normativo', 'Subjetivo', 'Ninguno'], 1, 'Por el deber de actuar.', '54');
+Q('puente', 'En la tentativa pesa más el elemento:', ['Objetivo', 'Normativo', 'Subjetivo', 'Causal'], 2, 'La intención dice qué se intentaba.', '54');
+Q('puente', 'Este capítulo abarca las páginas:', ['55 a 58', '45 a 54', '37 a 40', '59 a 80'], 0, 'Es corto.', '55–58');
+Q('puente', 'Después de los elementos objetivos, el libro estudia los elementos:', ['Subjetivos', 'Normativos', 'Procesales', 'Penitenciarios'], 1, 'En el capítulo siguiente.', '59');
+
+Q('voluntad', 'El elemento objetivo es el más importante en las conductas:', ['De omisión', 'De acción y de resultado', 'De tentativa', 'Culposas'], 1, 'La ley usa verbos de acción.', '55');
+Q('voluntad', 'El libro define la voluntad como:', ['La intención de dañar', 'La capacidad para autodeterminar libremente nuestros movimientos corporales', 'El deseo de cometer un delito', 'La conciencia del delito'], 1, 'Es dominar el propio cuerpo.', '55');
+Q('voluntad', 'El análisis de la voluntad responde la pregunta:', ['¿Por qué lo hizo?', '¿Cómo lo hizo?', '¿Cuándo lo juzgan?', '¿Quién es la víctima?'], 1, 'El ¿por qué? es del elemento subjetivo.', '55');
+Q('voluntad', 'El verbo del tipo de robo (art. 367) es:', ['Privar', 'Inferir', 'Apoderarse', 'Engañar'], 2, 'Privar es del homicidio; inferir, de las lesiones.', '55');
+Q('voluntad', 'El resultado de las conductas de acción normalmente es:', ['Un pensamiento', 'Un cambio externo en el estado de las cosas', 'Una sentencia', 'Una ley'], 1, 'Como la muerte, la lesión o la pérdida de una cosa.', '55');
+Q('voluntad', 'La ausencia de voluntad da lugar a:', ['Una pena mayor', 'La exclusión del elemento objetivo de la conducta-típica', 'La tentativa', 'El dolo'], 1, 'Se analizará más adelante.', '56');
+Q('voluntad', 'Según el autor, confundir el «¿cómo?» con el «¿por qué?» lleva a:', ['Mejores sentencias', 'Juicios de tipicidad erróneos, investigaciones inservibles y resoluciones injustas', 'Más rapidez', 'Nada'], 1, 'Por eso es una diferencia muy importante.', '56');
+
+Q('nexo', 'El nexo causal es:', ['La intención del autor', 'La relación que une la conducta con el resultado', 'La pena', 'El testigo'], 1, 'Es una cadena de causas.', '56');
+Q('nexo', 'En el ejemplo, ¿por qué no bastan los testigos que vieron disparar a Gaudencio?', ['Porque mienten siempre', 'Porque los sentidos pueden engañar: pudo disparar Teófilo', 'Porque no hay testigos', 'Porque Gaudencio confesó'], 1, 'Por eso se necesitan peritos.', '56');
+Q('nexo', 'La frase «la causa de la causa es la causa de lo causado» resume la teoría:', ['Finalista', 'Causalista (condicio sine qua non)', 'Funcionalista', 'Neoclásica'], 1, 'Hay que establecer toda la cadena causal.', '57');
+Q('nexo', 'El perito que hace la autopsia y determina la causa de la muerte es el:', ['Criminalista', 'Médico forense', 'Contador', 'Arquitecto'], 1, 'El criminalista establece cómo, cuándo, dónde, quién y en qué circunstancias.', '56');
+Q('nexo', 'Si la cadena causal no está respaldada con pruebas científicas:', ['Se condena igual', 'Habrá duda y, por el in dubio pro reo, el acusado probablemente será exonerado', 'Se repite el delito', 'Se aplica pena doble'], 1, 'Artículo 402 del CNPP.', '57');
+Q('nexo', 'Para dictar el auto de vinculación a proceso basta con:', ['Pruebas científicas plenas', 'Datos que hagan probable la responsabilidad del imputado', 'La sentencia', 'Una confesión'], 1, 'Artículo 316, fracción III, del CNPP.', '57');
+Q('nexo', 'Para una sentencia condenatoria se necesitan:', ['Indicios', 'Pruebas científicas que demuestren sin lugar a dudas que el acusado causó el resultado', 'Rumores', 'Solo testigos de oídas'], 1, 'Se presentan en la audiencia de juicio oral.', '57');
+
+Q('rubi', 'El caso Rubí ocurrió en:', ['Ciudad Juárez, 2008', 'Ciudad de México, 2014', 'Monterrey, 1999', 'Guadalajara, 2010'], 0, 'Así lo dice el libro.', '57');
+Q('rubi', 'Según el autor, en el caso Rubí el fiscal nunca estableció científicamente:', ['La edad de la víctima', 'El nexo causal entre la conducta del acusado y la muerte', 'El lugar del juicio', 'El nombre del juez'], 1, 'No probó que él la mató ni la causa de la muerte.', '57');
+Q('rubi', 'Los testigos que presentó la fiscalía eran:', ['Peritos', 'De oídas, y se contradecían', 'Testigos presenciales', 'Policías que vieron el hecho'], 1, 'Uno dijo «a balazos» y otro «la aventó al piso».', '57–58');
+Q('rubi', 'La supuesta confesión consistió en que el acusado:', ['Describió cómo pasó el hecho', 'Pidió perdón a la madre, sin decir cómo, cuándo ni dónde', 'Firmó un documento', 'Mostró el arma'], 1, 'Pedir perdón no prueba el nexo causal.', '58');
+Q('rubi', 'Según el autor, si el tribunal hubiera condenado, habría violado:', ['El fuero federal', 'La defensa, la presunción de inocencia y el debido proceso', 'El artículo 133', 'La ley de salud'], 1, 'Además, la condena solo se sostendría con pruebas ilícitas.', '58');
+Q('rubi', '¿Qué decidió el Tribunal de Juicio Oral?', ['Condenar', 'Absolver', 'Suspender el juicio', 'Enviarlo a otro estado'], 1, 'Después, los magistrados revocaron el fallo.', '58');
+Q('rubi', 'Para probar la relación causal en el juicio oral se necesitan:', ['Solo testigos', 'Pruebas científicas de expertos', 'La opinión del público', 'Una nota de prensa'], 1, 'Médicos, contadores, arquitectos, mecánicos, etcétera.', '58');
+
+Q('limites', 'Un problema del nexo causal que plantea el libro es:', ['¿Cuál es la causa inicial?', '¿Qué edad tiene el juez?', '¿Dónde se publica la ley?', '¿Cuánto dura el juicio?'], 0, 'También: ¿hasta dónde llegan los resultados?', '58');
+Q('limites', 'Los problemas del nexo causal se resuelven en los elementos:', ['Objetivos', 'Normativos jurídicos implícitos', 'Procesales', 'Penitenciarios'], 1, 'Se verán en el siguiente capítulo.', '58');
+Q('limites', 'Según el libro, el nexo causal es:', ['La única prueba necesaria', 'Un primer indicio, pero no siempre el único', 'Innecesario', 'Lo mismo que el dolo'], 1, 'Así termina el capítulo.', '58');
+Q('limites', 'En los elementos objetivos solo podemos determinar:', ['La intención', 'Cuál fue la conducta realizada y el resultado verificado', 'La pena', 'El deber de cuidado'], 1, 'Lo demás se analiza en otros elementos.', '58');
+Q('limites', 'El ejemplo de la víctima que rechaza la atención médica plantea la pregunta:', ['¿Quién es el juez?', '¿Hasta dónde terminan los resultados?', '¿Es delito federal?', '¿Hay tentativa?'], 1, '¿Responde quien disparó, el médico o ninguno?', '58');
+Q('limites', 'Según el resumen del libro, los elementos objetivos:', ['Se adivinan', 'Se perciben con los sentidos y se demuestran científico-naturalmente', 'Solo se suponen', 'Los decide la víctima'], 1, 'Solo así se puede sostener una acusación.', '58');
+Q('limites', '¿Quién podría ser considerado «causa» si se sigue la cadena hacia atrás, según el ejemplo del libro?', ['Solo la víctima', 'Quien construyó el arma', 'El juez', 'El testigo'], 1, 'Por eso la causalidad sola no basta.', '58');
+
+const EXQ = [];
+function E(t, f, q, o, a, e, p) { const it = { id: 'e' + (EXQ.length + 1), t, f, q, o, a, e, p }; EXQ.push(it); BANK.push(it); }
+E('voluntad', 'Relación', '¿Qué pareja es correcta?', ['Voluntad → ¿por qué lo hizo?', 'Voluntad → ¿cómo lo hizo?', 'Subjetivo → ¿cómo lo hizo?', 'Nexo causal → ¿por qué lo hizo?'], 1, 'El ¿por qué? es del elemento subjetivo.', '55');
+E('voluntad', 'Completar', 'Las lesiones (art. 289) usan el verbo «______».', ['privar', 'inferir', 'apoderarse', 'portar'], 1, 'Inferir una lesión.', '55');
+E('nexo', 'Caso', 'Hay testigos de que Raúl disparó, pero no hay autopsia ni peritaje. En el juicio oral, el juez:', ['Debe condenar', 'Probablemente debe absolver por duda (in dubio pro reo)', 'Debe aumentar la pena', 'Debe juzgar a los testigos'], 1, 'Para condenar se necesitan pruebas científicas.', '57');
+E('nexo', 'Completar', 'La teoría de la condicio sine qua non dice: «la causa de la causa es la causa de lo ______».', ['juzgado', 'causado', 'probado', 'pensado'], 1, 'Teoría causalista.', '57');
+E('nexo', '¿Cuál NO?', '¿Cuál NO es algo que determina el criminalista?', ['Si el probable responsable disparó', 'La trayectoria de la bala', 'La posición de víctima y victimario', 'La pena que se debe imponer'], 3, 'La pena la impone el juez.', '56');
+E('rubi', 'Caso', 'Un acusado pide perdón a la familia, pero no dice cómo, cuándo ni dónde pasó el hecho. Según el autor:', ['Es una confesión plena', 'No prueba el nexo causal', 'Basta para condenar', 'Es una prueba científica'], 1, 'Como en el caso Rubí.', '58');
+E('limites', '¿Cuál NO?', '¿Cuál NO es uno de los problemas del nexo causal que menciona el libro?', ['¿Cuál es la causa inicial?', '¿Hasta dónde terminan los resultados?', '¿Qué sucede cuando la conducta no causó el resultado?', '¿Qué color era el arma?'], 3, 'Las otras tres sí las menciona.', '58');
+E('nexo', 'Relación', 'Para el auto de vinculación a proceso bastan ______; para la condena se necesitan ______.', ['pruebas científicas / indicios', 'datos probables / pruebas científicas', 'rumores / testigos de oídas', 'confesión / nada'], 1, 'Artículos 316 y 402 del CNPP.', '57');
+
+const TF = [
+  ['El elemento objetivo es el más importante en las conductas de acción y de resultado.', true, 'La ley usa verbos de acción.', 'voluntad'],
+  ['La voluntad responde la pregunta ¿por qué lo hizo?', false, 'Responde ¿cómo lo hizo? El ¿por qué? es subjetivo.', 'voluntad'],
+  ['La voluntad es la capacidad para autodeterminar libremente nuestros movimientos corporales.', true, 'Es la definición del libro.', 'voluntad'],
+  ['Los testigos que vieron un disparo bastan para probar el nexo causal y condenar.', false, 'Son indicios; se necesitan pruebas científicas.', 'nexo'],
+  ['La teoría de la condicio sine qua non es causalista.', true, '«La causa de la causa es la causa de lo causado».', 'nexo'],
+  ['Para vincular a proceso bastan datos que hagan probable la responsabilidad.', true, 'Artículo 316, fracción III, del CNPP.', 'nexo'],
+  ['Si hay duda sobre el nexo causal, se debe condenar por seguridad.', false, 'Se aplica el in dubio pro reo.', 'nexo'],
+  ['En el caso Rubí, el fiscal probó científicamente el nexo causal.', false, 'Según el autor, nunca lo estableció.', 'rubi'],
+  ['En el caso Rubí, los testigos de la fiscalía eran de oídas.', true, 'Y se contradecían.', 'rubi'],
+  ['Pedir perdón a la familia equivale a confesar cómo pasó el hecho.', false, 'No dice cómo, cuándo, dónde ni en qué circunstancias.', 'rubi'],
+  ['El nexo causal siempre resuelve por sí solo quién responde por un resultado.', false, 'Es un primer indicio; a veces se necesitan los elementos normativos.', 'limites'],
+  ['Los problemas del nexo causal se resuelven en los elementos normativos jurídicos implícitos.', true, 'Se ven en el siguiente capítulo.', 'limites']
+];
+
+const FLASH = [
+  ['voluntad', 'Elemento objetivo', 'Lo que se percibe con los sentidos: verbos de acción y un cambio externo. Pesa más en la acción.'],
+  ['voluntad', 'Voluntad', '«Capacidad para autodeterminar libremente nuestros movimientos corporales». Pregunta: ¿cómo lo hizo?'],
+  ['voluntad', 'Verbos de acción', 'Privar (homicidio, 302), inferir (lesiones, 289), apoderarse (robo, 367).'],
+  ['nexo', 'Nexo causal', 'La relación que une la conducta con el resultado: una cadena de causas.'],
+  ['nexo', 'Condicio sine qua non', 'Teoría causalista: «la causa de la causa es la causa de lo causado».'],
+  ['nexo', 'Peritos', 'Médico forense (autopsia) y criminalista (cómo, cuándo, dónde, quién y en qué circunstancias).'],
+  ['nexo', 'Vincular vs. condenar', 'Vincular: datos probables (art. 316 CNPP). Condenar: pruebas científicas sin lugar a dudas.'],
+  ['rubi', 'Caso Rubí', 'Ciudad Juárez, 2008. No se probó científicamente el nexo causal. Para el autor, había que absolver.'],
+  ['rubi', 'Testigos de oídas', 'Personas que no vieron el hecho, solo escucharon decir algo.'],
+  ['limites', 'Límites del nexo causal', '¿Causa inicial? ¿Hasta dónde? ¿Y si no causó? Se resuelven en los elementos normativos.']
+];
+
+const ORDER_GAMES = [
+  { t: 'La cadena causal del ejemplo de Gaudencio', items: ['Gaudencio jala el gatillo', 'El martillo golpea la bala', 'La bala sale por el cañón con velocidad', 'La bala impacta en el corazón de Maclovio', 'Maclovio muere'] },
+  { t: 'Del indicio a la condena', items: ['Los testigos describen lo que vieron (indicios)', 'Con datos probables se dicta la vinculación a proceso', 'Los peritos hacen pruebas científicas', 'En el juicio oral se prueba el nexo causal sin dudas', 'Se puede dictar sentencia condenatoria'] }
+];
+
+const MATCH_GAMES = [
+  { t: 'Verbo y delito', pairs: [['Privar de la vida', 'Homicidio (302)'], ['Inferir una lesión', 'Lesiones (289)'], ['Apoderarse', 'Robo (367)']] },
+  { t: 'Pregunta y elemento', pairs: [['¿Cómo lo hizo?', 'Voluntad (objetivo)'], ['¿Por qué lo hizo?', 'Elemento subjetivo'], ['¿Su conducta causó el resultado?', 'Nexo causal']] },
+  { t: 'Personaje del ejemplo', pairs: [['Gaudencio', 'Disparó, pero pudo fallar'], ['Maclovio', 'La víctima'], ['Teófilo', 'Disparó escondido'], ['Médico forense', 'Hace la autopsia']] }
+];
+
+const RIDDLES = [
+  { a: 'La voluntad', c: ['Soy parte del elemento objetivo.', 'Respondo la pregunta ¿cómo lo hizo?', 'Soy la capacidad de dominar tu propio cuerpo.'], t: 'voluntad' },
+  { a: 'El nexo causal', c: ['Soy una cadena.', 'Uno la conducta con el resultado.', 'Me prueban los peritos con pruebas científicas.'], t: 'nexo' },
+  { a: 'Teófilo', c: ['Aparezco en un ejemplo del libro.', 'Estaba escondido.', 'Yo hice el disparo que de verdad mató a Maclovio.'], t: 'nexo' },
+  { a: 'El médico forense', c: ['Soy un perito.', 'Hago la autopsia.', 'Digo cuál fue la causa de la muerte.'], t: 'nexo' },
+  { a: 'Los testigos de oídas', c: ['No vi el hecho.', 'Solo escuché decir algo.', 'En el caso Rubí, nos contradecíamos.'], t: 'rubi' }
+];
+
+const GLOSSARY = [
+  { k: 'objetivo', t: 'Elemento objetivo', m: ['elemento objetivo', 'elementos objetivos'], d: 'Lo que se percibe con los sentidos de una conducta: lo que pasó afuera.', ex: 'Ver a alguien disparar.', p: '55' },
+  { k: 'verbo', t: 'Verbos de acción', m: ['verbos de acción'], d: 'Las palabras con que la ley describe la conducta prohibida.', ex: 'Privar, inferir, apoderarse.', p: '55' },
+  { k: 'inferir', t: 'Inferir (una lesión)', m: ['inferir'], d: 'Causar una lesión a alguien (art. 289, lesiones).', ex: 'Golpear a alguien y romperle un brazo.', p: '55' },
+  { k: 'apoderarse', t: 'Apoderarse', m: ['apoderarse'], d: 'Tomar una cosa ajena para hacerla propia (art. 367, robo).', ex: 'Quitarle la cartera a alguien.', p: '55' },
+  { k: 'dominio', t: 'Pérdida del dominio', m: ['dominio'], d: 'Cuando el dueño ya no tiene el poder sobre su cosa.', ex: 'Te roban el celular: pierdes su dominio.', p: '55' },
+  { k: 'sentidos', t: 'Los sentidos', m: ['sentidos'], d: 'Vista, oído, olfato, tacto y gusto: con ellos percibimos los hechos.', ex: 'Ver y oír un disparo.', p: '55–58' },
+  { k: 'voluntad', t: 'Voluntad', m: ['voluntad', 'voluntaria'], d: '«Capacidad para autodeterminar libremente nuestros movimientos corporales»: dominar el propio cuerpo.', ex: 'Levantarse con tus propias fuerzas.', p: '55' },
+  { k: 'subjetivo', t: 'Elemento subjetivo', m: ['elemento subjetivo'], d: 'Lo que pasaba en la mente del sujeto: el ¿por qué o para qué lo hizo?', ex: '¿Se levantó para ir al cine?', p: '55' },
+  { k: 'nexo', t: 'Nexo causal', m: ['nexo causal', 'relación causal'], d: 'La relación que une la conducta con el resultado: una cadena de causas.', ex: 'Disparo → bala → herida → muerte.', p: '56' },
+  { k: 'percusion', t: 'Percusión', m: ['percusión'], d: 'El golpe del martillo de un arma sobre la bala que la hace salir.', ex: 'Ocurre al jalar el gatillo.', p: '56' },
+  { k: 'indicio', t: 'Indicio', m: ['indicios', 'indicio'], d: 'Una pista que hace pensar que algo pasó, pero que no lo prueba con certeza.', ex: 'Lo que dicen los testigos.', p: '56' },
+  { k: 'perito', t: 'Perito', m: ['peritos', 'perito'], d: 'Experto que hace pruebas científicas o técnicas para un juicio.', ex: 'Médico forense, criminalista.', p: '56' },
+  { k: 'autopsia', t: 'Autopsia', m: ['autopsia'], d: 'Examen del cuerpo de una persona fallecida para saber la causa de la muerte.', ex: 'La hace el médico forense.', p: '56' },
+  { k: 'forense', t: 'Médico forense', m: ['médico forense'], d: 'Médico que hace exámenes para la justicia, como las autopsias.', ex: 'Determina la causa de la muerte.', p: '56' },
+  { k: 'criminalista', t: 'Criminalista', m: ['criminalista'], d: 'Experto que con pruebas científicas reconstruye cómo, cuándo, dónde y quién hizo el hecho.', ex: 'Analiza la trayectoria de la bala.', p: '56' },
+  { k: 'trayectoria', t: 'Trayectoria', m: ['trayectoria'], d: 'El camino que siguió algo, por ejemplo una bala.', ex: 'De la pistola al corazón de la víctima.', p: '56–57' },
+  { k: 'cientifico', t: 'Pruebas científicas', m: ['pruebas científicas', 'científico-naturales', 'científico-naturalmente', 'científicamente'], d: 'Pruebas basadas en la ciencia que dan certeza sobre lo que pasó.', ex: 'La autopsia, el peritaje del arma.', p: '57–58' },
+  { k: 'causalista', t: 'Teoría causalista', m: ['teoría causalista', 'causalista'], d: 'Teoría que resume el nexo causal en «la causa de la causa es la causa de lo causado».', ex: 'También se llama condicio sine qua non.', p: '57' },
+  { k: 'condicio', t: 'Condicio sine qua non', m: ['condicio sine qua non'], d: 'Latín: «condición sin la cual no». Toda causa sin la cual el resultado no habría ocurrido.', ex: 'Sin el disparo, no habría muerte.', p: '57' },
+  { k: 'indubio', t: 'In dubio pro reo', m: ['in dubio pro reo'], d: 'En caso de duda, a favor del acusado (art. 402 del CNPP).', ex: 'Si no se prueba la cadena causal, se absuelve.', p: '57' },
+  { k: 'exonerado', t: 'Exonerado', m: ['exonerado'], d: 'Liberado de culpa o de responsabilidad; absuelto.', ex: 'Por falta de pruebas.', p: '57' },
+  { k: 'vinculacion', t: 'Auto de vinculación a proceso', m: ['auto de vinculación a proceso', 'vinculación a proceso'], d: 'Decisión del juez que abre el proceso porque hay datos probables (art. 316 del CNPP).', ex: 'Pueden bastar testigos.', p: '57' },
+  { k: 'imputado', t: 'Imputado', m: ['imputado'], d: 'La persona a quien se le atribuye un delito durante el proceso.', ex: 'Antes se decía indiciado.', p: '57' },
+  { k: 'oral', t: 'Juicio oral', m: ['juicio oral', 'audiencia de juicio oral'], d: 'La etapa del proceso acusatorio donde se presentan las pruebas ante el juez, en voz alta y en público.', ex: 'Ahí se decide si se condena o se absuelve.', p: '57' },
+  { k: 'condenatoria', t: 'Sentencia condenatoria', m: ['sentencia condenatoria'], d: 'La decisión que declara responsable al acusado y le impone una pena.', ex: 'Requiere pruebas sin lugar a dudas.', p: '57' },
+  { k: 'oidas', t: 'Testigo de oídas', m: ['de oídas'], d: 'Persona que no vio el hecho; solo escuchó a alguien contarlo.', ex: 'Los testigos del caso Rubí.', p: '57' },
+  { k: 'confesion', t: 'Confesión', m: ['confesión'], d: 'Cuando el acusado reconoce que cometió el hecho y explica cómo.', ex: 'Pedir perdón no es lo mismo.', p: '58' },
+  { k: 'presuncion', t: 'Presunción de inocencia', m: ['presunción de inocencia'], d: 'Toda persona es inocente hasta que se pruebe lo contrario.', ex: 'Se viola si se condena sin pruebas.', p: '58' },
+  { k: 'ilicitas', t: 'Pruebas ilícitas', m: ['pruebas ilícitas'], d: 'Pruebas obtenidas violando derechos. No se pueden usar.', ex: 'Una confesión forzada.', p: '58' },
+  { k: 'debido', t: 'Debido proceso', m: ['debido proceso'], d: 'Nadie puede ser castigado sin un juicio que cumpla todas las formalidades.', ex: 'Respetar el derecho de defensa.', p: '58' },
+  { k: 'revocar', t: 'Revocar', m: ['revocar', 'revocaron'], d: 'Dejar sin efecto una decisión anterior.', ex: 'Los magistrados revocaron la absolución.', p: '58' },
+  { k: 'normativo', t: 'Elementos normativos', m: ['elementos normativos', 'normativos jurídicos implícitos'], d: 'Elementos que requieren una valoración cultural o jurídica. Resuelven los límites del nexo causal.', ex: 'Se ven en el siguiente capítulo.', p: '58–59' }
+];
+
+const VIDEOS = [
+  { t: 'Elementos objetivos del tipo', q: 'elementos objetivos del tipo penal explicación', s: 'voluntad' },
+  { t: 'La voluntad en la conducta', q: 'conducta voluntaria derecho penal ausencia de conducta', s: 'voluntad' },
+  { t: 'Nexo causal', q: 'nexo causal derecho penal explicación', s: 'nexo' },
+  { t: 'Teoría de la equivalencia de condiciones', q: 'conditio sine qua non equivalencia de las condiciones', s: 'nexo' },
+  { t: 'La prueba pericial en el juicio oral', q: 'prueba pericial juicio oral México', s: 'nexo' }
+];
+const READINGS = [
+  { t: 'El libro completo (gratis, UNAM)', url: 'http://biblio.juridicas.unam.mx/libros/libro.htm?l=3805', s: 'Biblioteca Jurídica Virtual del Instituto de Investigaciones Jurídicas' },
+  { t: 'Código Nacional de Procedimientos Penales (arts. 316 y 402)', url: 'https://www.diputados.gob.mx/LeyesBiblio/pdf/CNPP.pdf', s: 'Cámara de Diputados · versión vigente' }
+];
+
+const COMPARE = [
+  { t: 'Las dos partes del elemento objetivo', head: ['Parte', '¿Qué pregunta?', '¿Cómo se prueba?'], rows: [
+    ['Voluntad', '¿Cómo lo hizo? ¿Dominaba su cuerpo?', 'Análisis físico-objetivo'],
+    ['Nexo causal', '¿Su conducta causó el resultado?', 'Pruebas científicas de peritos']] },
+  { t: 'Indicios y pruebas', head: ['', 'Indicios', 'Pruebas científicas'], rows: [
+    ['¿Qué son?', 'Lo que perciben los testigos', 'Lo que demuestran los peritos'],
+    ['¿Alcanzan para…?', 'La vinculación a proceso', 'La sentencia condenatoria'],
+    ['Si solo hay esto…', 'Hay duda: in dubio pro reo', 'Se puede sostener la condena']] }
+];
+const BIG_SINOP = { root: 'Elementos objetivos', br: [
+  { t: 'Qué son', kids: ['Lo que se percibe con los sentidos', 'Pesan más en la acción'] },
+  { t: 'Voluntad', kids: ['Dominar el propio cuerpo', '¿Cómo lo hizo?'] },
+  { t: 'Nexo causal', kids: ['Cadena de causas', 'Peritos y pruebas científicas', 'Condicio sine qua non'] },
+  { t: 'Lecciones', kids: ['Caso Rubí: sin nexo no hay condena', 'El nexo es un primer indicio'] }] };
+
+const MOTIVATION = [
+  'Diez minutos bien hechos valen más que una hora cansada.',
+  'Vas una estación a la vez. Así se llega lejos.',
+  'Si una palabra no se entiende, tócala: para eso está.',
+  'Lo que explicas con tus palabras ya es tuyo.',
+  'Equivocarte aquí es practicar. En el examen ya lo sabrás.',
+  'Este capítulo es cortito: ¡lo terminas rápido!'
+];
+
+const TOUR = [
+  { ic: '👋', t: 'Hola, Carmen', s: 'Esta página te ayuda a estudiar los elementos objetivos paso a paso. Funciona igual que las anteriores. Te la enseño en un minuto.', mock: 'hello' },
+  { ic: '🌸', t: 'Un solo botón', s: 'Al entrar, solo toca el botón rosa grande que dice Continuar. Te lleva justo a donde te quedaste.', mock: 'continue' },
+  { ic: '🪜', t: 'Cinco pasos cortos', s: 'Cada estación dura unos diez minutos y tiene cinco pasos: leer, entender, aplicar, comprobar y explicar.', mock: 'steps' },
+  { ic: '📖', t: 'Leer con el libro', s: 'La página te dice en qué página del libro empezar, dónde terminar y qué buscar. Cuando termines, toca el botón: ya lo leí.', mock: 'read' },
+  { ic: '🔊', t: 'Explícame', s: 'Si algo no se entiende, toca Explícame y te lo explico hablando. En Más opciones puedes cambiar la velocidad de la voz.', mock: 'voice' },
+  { ic: '❓', t: 'Palabras difíciles', s: 'Las palabras difíciles tienen puntitos abajo y un signo de interrogación. Tócalas y verás qué significan.', mock: 'word' },
+  { ic: '☕', t: 'Descansa cuando quieras', s: 'A los diez minutos te aviso para que descanses. Si sales, la página guarda dónde ibas. ¡Tú puedes, Carmen!', mock: 'rest' }
+];
+
+const CW = {"H": 17, "W": 13, "words": [{"w": "VOLUNTAD", "c": "Capacidad para autodeterminar libremente nuestros movimientos", "r": 4, "col": 5, "d": "A"}, {"w": "AUTOPSIA", "c": "Examen que dice la causa de la muerte", "r": 1, "col": 6, "d": "D"}, {"w": "GAUDENCIO", "c": "En el ejemplo, jaló el gatillo", "r": 1, "col": 12, "d": "D"}, {"w": "INDICIOS", "c": "Lo que aportan los testigos: no bastan para condenar", "r": 3, "col": 9, "d": "D"}, {"w": "CRIMINALISTA", "c": "Dice cómo, cuándo, dónde y quién", "r": 10, "col": 0, "d": "A"}, {"w": "FORENSE", "c": "Médico ___: hace la autopsia", "r": 6, "col": 1, "d": "A"}, {"w": "NEXO", "c": "___ causal: une la conducta con el resultado", "r": 3, "col": 2, "d": "D"}, {"w": "TEOFILO", "c": "En el ejemplo, disparó escondido", "r": 10, "col": 10, "d": "D"}, {"w": "INFERIR", "c": "Verbo de las lesiones (art. 289)", "r": 10, "col": 2, "d": "D"}, {"w": "APODERARSE", "c": "Verbo del robo (art. 367)", "r": 1, "col": 0, "d": "A"}, {"w": "MACLOVIO", "c": "La víctima del ejemplo", "r": 8, "col": 0, "d": "D"}, {"w": "PERITOS", "c": "Expertos que hacen pruebas científicas", "r": 12, "col": 5, "d": "A"}, {"w": "OIDAS", "c": "Testigos de ___: no vieron el hecho", "r": 8, "col": 3, "d": "A"}, {"w": "SENTIDOS", "c": "Vista, oído, olfato, tacto y gusto", "r": 16, "col": 4, "d": "A"}, {"w": "CAUSAL", "c": "Nexo ___: la cadena de causas", "r": 0, "col": 0, "d": "D"}]};
+
+/* ═══════════ EXÁMENES (armados con el banco) ═══════════ */
+const QB = {}; BANK.forEach(q => { QB[q.id] = q; });
+const byT = t => BANK.filter(q => q.t === t && q.id[0] === 'q');
+const EXAMS = (() => {
+  const st = LESSONS.filter(l => !l.bridge).map(l => l.id);
+  const pick = idxs => st.flatMap(t => idxs.map(i => byT(t)[i])).filter(Boolean).map(q => q.id);
+  const a = pick(CHAP.exA), b = pick(CHAP.exB);
+  const c = EXQ.map(q => q.id).concat(st.map(t => (byT(t)[6] || byT(t)[5] || byT(t)[0]).id)).slice(0, 18);
+  return [
+    { id: 'ex1', t: 'Examen 1', s: `Todo el capítulo · ${a.length} preguntas`, qs: a },
+    { id: 'ex2', t: 'Examen 2', s: `Todo el capítulo · ${b.length} preguntas`, qs: b },
+    { id: 'ex3', t: 'Examen 3 · Estilo examen', s: `Casos, completar y «¿cuál NO?» · ${c.length} preguntas`, qs: c }
+  ];
+})();
+
+/* ═══════════ PLATAFORMA · LÓGICA (modo enfocado, ajustada a Carmen) ═══════════ */
+(function () {
+  'use strict';
+  const KEY = CHAP.key;
+  const STEP_NAMES = ['Leer', 'Entender', 'Aplicar', 'Comprobar', 'Explicar'];
+  const STEP_IC = ['📖', '💡', '🧩', '✅', '🗣️'];
+  const PAUSE_MS = 10 * 60 * 1000;
+  const MAXHOT = 4;
+  const LET = 'ABCD';
+  const NAME = STUDENT.name;
+  const L = id => LESSONS.find(l => l.id === id);
+  const idx = id => LESSONS.findIndex(l => l.id === id);
+  const coreQs = id => byT(id).slice(0, 3);
+  const app = document.getElementById('app');
+
+  /* ── Estado guardado ── */
+  function defaults() { return { v: 1, at: LESSONS[0].id, pos: {}, done: {}, sp: {}, reveal: {}, lq: {}, ans: {}, wrong: [], rate: 0.95, auto: false, tour: false, days: [], notes: {}, keys: {}, exams: {}, cw: {} }; }
+  function load() {
+    try { const raw = localStorage.getItem(KEY); if (raw) { const d = JSON.parse(raw); const b = defaults(); Object.keys(b).forEach(k => { if (d[k] === undefined) d[k] = b[k]; }); return d; } } catch (e) { /* sin almacenamiento */ }
+    return defaults();
+  }
+  let S = load();
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) { /* ignorar */ } }
+  const dkey = d => d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0');
+  const today = () => dkey(new Date());
+  const daysBetween = (a, b) => Math.round((new Date(b + 'T12:00:00') - new Date(a + 'T12:00:00')) / 864e5);
+  function markDay() { const t = today(); if (!S.days.includes(t)) { S.days.push(t); S.days = S.days.slice(-90); save(); } }
+  function streak() { let n = 0; const d = new Date(); while (S.days.includes(dkey(d))) { n++; d.setDate(d.getDate() - 1); } return n; }
+  const pos = id => S.pos[id] || { step: 0, sub: 0 };
+
+  /* ── Pantallas de una estación ── */
+  function count(id, step) { const l = L(id); return [READING[id].length, l.steps.length + 1, CASES[id].length, coreQs(id).length, 1][step]; }
+  function totalScreens(id) { let n = 0; for (let s = 0; s < 5; s++) n += count(id, s); return n; }
+  function screenIndex(id, step, sub) { let n = 0; for (let s = 0; s < step; s++) n += count(id, s); return n + sub; }
+
+  /* ── Estado de pantalla ── */
+  const UI = { view: 'home', st: null, sheet: null, modal: null, game: null, ex: null, tour: null, fin: null, t0: 0, autoKey: '', q: '', rv: {}, cwWord: null, cwCheck: false };
+
+  /* ── Voz que explica ── */
+  function n2w(n) {
+    n = +n;
+    const u = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciséis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte', 'veintiuno', 'veintidós', 'veintitrés', 'veinticuatro', 'veinticinco', 'veintiséis', 'veintisiete', 'veintiocho', 'veintinueve'];
+    const t = ['', '', '', 'treinta', 'cuarenta', 'cincuenta', 'sesenta', 'setenta', 'ochenta', 'noventa'];
+    const h = ['', 'ciento', 'doscientos', 'trescientos', 'cuatrocientos', 'quinientos', 'seiscientos', 'setecientos', 'ochocientos', 'novecientos'];
+    if (n < 30) return u[n];
+    if (n < 100) return t[Math.floor(n / 10)] + (n % 10 ? ' y ' + u[n % 10] : '');
+    if (n === 100) return 'cien';
+    if (n < 1000) return h[Math.floor(n / 100)] + (n % 100 ? ' ' + n2w(n % 100) : '');
+    if (n < 1e6) { const k = Math.floor(n / 1000), r = n % 1000; return (k === 1 ? 'mil' : n2w(k) + ' mil') + (r ? ' ' + n2w(r) : ''); }
+    return String(n);
+  }
+  function say(html) {
+    let s = String(html).replace(/<[^>]+>/g, ' ').replace(/&nbsp;/g, ' ');
+    s = s.replace(/\bCPF\b/g, 'Código Penal Federal').replace(/\bDOF\b/g, 'Diario Oficial de la Federación').replace(/\bCNPP\b/g, 'Código Nacional de Procedimientos Penales')
+      .replace(/\bart\.\s*/gi, 'artículo ').replace(/\bpágs\.\s*/gi, 'páginas ').replace(/\bpág\.\s*/gi, 'página ');
+    s = s.replace(/[«»"“”]/g, '').replace(/≠/g, ' no es lo mismo que ').replace(/→/g, ', luego, ').replace(/\s=\s/g, ' es ').replace(/·/g, ', ').replace(/…/g, '. ');
+    s = s.replace(/(\d)\s*[–-]\s*(\d)/g, '$1 a $2').replace(/(\d{1,3}),(\d{3})/g, '$1$2').replace(/\d+/g, m => n2w(m));
+    return s.replace(/\s+/g, ' ').trim();
+  }
+  const synth = ('speechSynthesis' in window) ? window.speechSynthesis : null;
+  let voice = null, speakingId = null, tok = 0;
+  function pickVoice() { if (!synth) return; const vs = synth.getVoices(); voice = vs.find(v => /es[-_]MX/i.test(v.lang)) || vs.find(v => /es[-_](US|419)/i.test(v.lang)) || vs.find(v => /^es/i.test(v.lang)) || null; }
+  if (synth) { pickVoice(); try { synth.addEventListener('voiceschanged', pickVoice); } catch (e) { synth.onvoiceschanged = pickVoice; } }
+  function speak(text, id, onend) {
+    if (!synth) { toast('Tu navegador no tiene voz. Prueba abrir la página en Chrome.'); if (onend) setTimeout(onend, 5000); return; }
+    const my = ++tok; synth.cancel();
+    const parts = say(text).split(/([.!?])\s+/).reduce((acc, p, i, arr) => { if (i % 2 === 0) acc.push(p + (arr[i + 1] || '')); return acc; }, []).filter(x => x.trim());
+    speakingId = id || 'x'; syncVoice();
+    parts.forEach((p, i) => {
+      const u = new SpeechSynthesisUtterance(p); u.lang = 'es-MX'; if (voice) u.voice = voice; u.rate = S.rate;
+      if (i === parts.length - 1) u.onend = () => { if (my !== tok) return; speakingId = null; syncVoice(); if (onend) onend(); };
+      u.onerror = () => { if (my !== tok) return; speakingId = null; syncVoice(); };
+      synth.speak(u);
+    });
+  }
+  function stop() { tok++; if (synth) synth.cancel(); speakingId = null; syncVoice(); }
+  let SAY = {};
+  function sayBtn(id, text, label, cls) {
+    label = label || 'Explícame'; SAY[id] = text; const on = speakingId === id;
+    return `<button class="say ${cls || ''} ${on ? 'on' : ''}" data-a="say" data-id="${id}" data-l="${label}"><span class="ic" aria-hidden="true">${on ? '⏹' : '🔊'}</span><span class="lbl">${on ? 'Detener' : label}</span></button>`;
+  }
+  function syncVoice() {
+    document.querySelectorAll('[data-a="say"]').forEach(b => {
+      const on = speakingId === b.dataset.id; b.classList.toggle('on', on);
+      b.querySelector('.lbl').textContent = on ? 'Detener' : b.dataset.l; b.querySelector('.ic').textContent = on ? '⏹' : '🔊';
+    });
+  }
+
+  /* ── Palabras difíciles subrayadas ── */
+  const GL = {}; const ALTS = [];
+  GLOSSARY.forEach(g => { GL[g.k] = g; g.m.forEach(m => ALTS.push([m, g.k])); });
+  ALTS.sort((a, b) => b[0].length - a[0].length);
+  const altKey = {}; ALTS.forEach(([m, k]) => { altKey[m.toLowerCase()] = k; });
+  const esc = s => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  let GL_RE = null;
+  try { GL_RE = new RegExp('(^|[^\\p{L}])(' + ALTS.map(a => esc(a[0])).join('|') + ')(?![\\p{L}])', 'giu'); } catch (e) { GL_RE = null; }
+  function hot(html, used) {
+    if (!html) return '';
+    if (!GL_RE) return html;
+    let skip = 0;
+    return String(html).split(/(<[^>]+>)/).map(p => {
+      if (p.charAt(0) === '<') { if (/^<(button|a)\b/i.test(p)) skip++; else if (/^<\/(button|a)>/i.test(p)) skip = Math.max(0, skip - 1); return p; }
+      if (skip || used.size >= MAXHOT) return p;
+      return p.replace(GL_RE, (all, pre, w) => {
+        const k = altKey[w.toLowerCase()];
+        if (!k || used.has(k) || used.size >= MAXHOT) return all;
+        used.add(k);
+        return pre + `<button class="hw" data-a="gl" data-k="${k}">${w}<span class="hw-q" aria-hidden="true">?</span></button>`;
+      });
+    }).join('');
+  }
+
+  /* ── Utilidades ── */
+  function shuffle(a) { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  function toast(msg) { const t = document.createElement('div'); t.className = 'toast'; t.setAttribute('role', 'status'); t.textContent = msg; document.body.appendChild(t); setTimeout(() => t.remove(), 2800); }
+  const top = () => window.scrollTo(0, 0);
+  let askKey = null, askT = 0;
+  function ask(key, msg) { if (askKey === key && Date.now() - askT < 5000) { askKey = null; return true; } askKey = key; askT = Date.now(); toast(msg); return false; }
+  function rec(q, ok, fromErrors) {
+    S.ans[q.id] = ok;
+    if (!ok && !S.wrong.includes(q.id)) S.wrong.push(q.id);
+    if (ok && fromErrors) S.wrong = S.wrong.filter(x => x !== q.id);
+    save();
+  }
+  function dueReview() {
+    const lv = [1, 3, 7];
+    for (const l of LESSONS) {
+      const d = S.done[l.id]; if (!d) continue;
+      const done = (S.sp[l.id] || []).length; if (done >= lv.length) continue;
+      if (daysBetween(d, today()) >= lv[done]) return l.id;
+    }
+    return null;
+  }
+  function nextStation() { if (S.at && !S.done[S.at]) return S.at; const n = LESSONS.find(l => !S.done[l.id]); return n ? n.id : null; }
+
+  /* ── Preguntas ── */
+  const qScript = (q, n) => `${n ? 'Pregunta ' + n + '. ' : ''}${q.q.replace(/_{3,}/g, ' espacio en blanco ')} ${q.o.map((o, i) => 'Opción ' + LET[i] + ': ' + o + '.').join(' ')}`;
+  const fbScript = (q, ch) => (ch === q.a ? `¡Muy bien, ${NAME}! ` : `Casi, ${NAME}. No pasa nada, así se aprende. La respuesta correcta es la ${LET[q.a]}: ${q.o[q.a]}. `) + q.e + ` Lo encuentras en la página ${q.p} del libro.`;
+  function vOpts(q, ch, act) {
+    return `<div class="opts">${q.o.map((o, i) => { let c = ''; if (ch != null) { if (i === q.a) c = 'ok'; else if (i === ch) c = 'no'; }
+      return `<button class="opt ${c}" data-a="${act}" data-i="${i}" ${ch != null ? 'disabled' : ''}><span class="ov">${LET[i]}</span><span>${o}</span></button>`; }).join('')}</div>`;
+  }
+  function vFb(q, ch, id) {
+    const ok = ch === q.a;
+    return `<div class="fb ${ok ? 'ok' : 'no'}" role="status"><b class="h">${ok ? '¡Muy bien!' : 'Casi. Vamos a verlo.'}</b><p>${ok ? '' : `La correcta es la <b>${LET[q.a]}</b>: ${q.o[q.a]}. `}${q.e}</p><span class="pg">Libro, pág. ${q.p}</span>${sayBtn(id, fbScript(q, ch), 'Explícame por qué')}</div>`;
+  }
+
+  /* ═════════ VISTAS ═════════ */
+  const ICONS = {
+    home: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/></svg>',
+    study: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5a2 2 0 012-2h13v16H6a2 2 0 00-2 2z"/><path d="M4 19V5"/></svg>',
+    review: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 109-9"/><path d="M3 4v5h5"/></svg>',
+    words: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>'
+  };
+  function vTabs() {
+    const g = { home: 'home', more: 'home', exams: 'home', exam: 'home', hoja: 'home', videos: 'home', avance: 'home', study: 'study', next: 'study', review: 'review', game: 'review', words: 'words' }[UI.view] || 'home';
+    const tab = (v, t) => `<button class="tab ${g === v ? 'on' : ''}" data-a="go" data-v="${v}" ${g === v ? 'aria-current="page"' : ''}>${ICONS[v]}<span>${t}</span></button>`;
+    return `<nav class="tabbar" aria-label="Secciones"><div class="tabbar-in">${tab('home', 'Inicio')}${tab('study', 'Estudiar')}${tab('review', 'Repasar')}${tab('words', 'Palabras')}</div></nav>`;
+  }
+  const backTo = (v, t) => `<button class="back" data-a="go" data-v="${v}">← ${t}</button>`;
+
+  /* Inicio */
+  function vHome() {
+    const h = new Date().getHours();
+    const g = h < 12 ? 'Buenos días' : h < 19 ? 'Buenas tardes' : 'Buenas noches';
+    const nDone = LESSONS.filter(l => S.done[l.id]).length;
+    const nx = nextStation(); let cont;
+    if (nx) {
+      const l = L(nx), p = pos(nx), started = p.step > 0 || p.sub > 0;
+      cont = `<button class="btn big wide" data-a="cont"><span class="big-t">${started ? 'Continuar' : (nDone ? 'Continuar' : 'Empezar')} →</span><span class="big-s">${l.icon} ${l.title}<br>Paso ${p.step + 1} de 5: ${STEP_NAMES[p.step]}</span></button>`;
+    } else cont = `<button class="btn big wide" data-a="go" data-v="exams"><span class="big-t">Hacer el examen →</span><span class="big-s">Terminaste las ${LESSONS.length} estaciones 🎉</span></button>`;
+    const due = dueReview();
+    const m = MOTIVATION[(new Date().getDate()) % MOTIVATION.length];
+    return `<main class="app home">
+      <section class="hero"><div class="eyebrow on-acc">Expediente · Capítulo ${CHAP.n} · ${CHAP.short}</div><h1>${g}, ${NAME}</h1>
+        <div class="hero-meter"><span>${nDone} de ${LESSONS.length} estaciones</span><div class="bar"><i style="width:${Math.round(nDone / LESSONS.length * 100)}%"></i></div></div></section>
+      ${cont}
+      ${due ? `<button class="btn ghost wide tall" data-a="spaced" data-id="${due}">🔁 Repaso de hoy · 5 preguntas<br><small>${L(due).title}</small></button>` : ''}
+      <button class="btn line wide" data-a="tour">▶ Ver cómo se usa la página (1 minuto)</button>
+      <details class="more"><summary>Más opciones</summary><div class="stack tight-6">
+        <button class="mission-l" data-a="go" data-v="exams"><span>📝</span><span class="t">Exámenes de práctica</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="hoja"><span>🗂️</span><span class="t">Hoja de repaso (tapa y destapa)</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="videos"><span>🎬</span><span class="t">Videos y lecturas</span><span>›</span></button>
+        <button class="mission-l" data-a="go" data-v="avance"><span>📈</span><span class="t">Mi avance y la voz</span><span>›</span></button>
+      </div></details>
+      <p class="motiv-s center">${m}</p>
+    </main>`;
+  }
+
+  /* Estudiar */
+  function vStudy() {
+    return `<main class="app"><h1>Estudiar</h1><p class="muted">Capítulo ${CHAP.n} · ${CHAP.short} · págs. ${CHAP.pages}. Ve en orden, una estación a la vez.</p>
+    <div class="route">${LESSONS.map((l, i) => {
+      const p = pos(l.id), d = S.done[l.id];
+      const stt = d ? 'Terminada ✓' : (p.step || p.sub) ? `Vas en el paso ${p.step + 1}: ${STEP_NAMES[p.step]}` : 'Sin empezar';
+      return `<button class="lrow ${d ? 'done' : ''}" data-a="open" data-id="${l.id}"><span class="n">${d ? '✓' : i + 1}</span><span><span class="tt">${l.icon} ${l.title}</span><span class="meta">págs. ${l.pages} · unos ${l.mins} min · ${stt}</span></span><span class="ic">›</span></button>`;
+    }).join('')}</div></main>`;
+  }
+
+  /* Estación en modo enfocado */
+  function vLesson() {
+    const id = UI.st, l = L(id), p = pos(id), st = p.step, sub = p.sub;
+    const tot = totalScreens(id), si = screenIndex(id, st, sub), n = count(id, st);
+    const used = new Set(); const rk = `${id}:${st}:${sub}`; const rev = !!S.reveal[rk];
+    const last = sub === n - 1;
+    const nextLbl = last && st < 4 ? `Siguiente: ${STEP_NAMES[st + 1]} →` : 'Siguiente →';
+    const nextB = `<button class="btn big-n" data-a="next">${nextLbl}</button>`;
+    let body = '', primary = nextB, main = '';
+    if (st === 0) {
+      const f = READING[id][sub];
+      main = `Abre tu libro en la página ${f.p}. Empieza donde dice: ${f.start}. Lee hasta donde dice: ${f.end}. Mientras lees, busca esto: ${f.look} ${f.tip ? f.tip + ' ' : ''}Sáltate las notas al pie, que son los textos chiquitos con numeritos abajo de la página. Cuando termines, toca el botón: ya lo leí.`;
+      body = `<section class="sheet frag ${rev ? 'fdone' : ''}"><div class="eyebrow">Pedacito ${sub + 1} de ${n} · Libro, pág. ${f.p}</div><h2>Lee en tu libro</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}
+        <div class="fr-where"><div><span class="lab">Empieza en</span>«${f.start}…»</div><div><span class="lab">Termina en</span>«…${f.end}»</div></div>
+        <p class="fr-look"><b>Busca:</b> ${hot(f.look, used)}</p>${f.tip ? `<p class="ojo small">💡 ${f.tip}</p>` : ''}
+        ${rev ? `<div class="model"><b>Lo que tenías que encontrar</b><p>${hot(f.ans, used)}</p>${sayBtn('a-' + rk, 'Lo que tenías que encontrar es: ' + f.ans, 'Escuchar la respuesta')}</div>` : ''}</section>`;
+      if (!rev) primary = `<button class="btn big-n" data-a="reveal">Ya lo leí ✓</button>`;
+    } else if (st === 1) {
+      if (sub < l.steps.length) {
+        const s = l.steps[sub]; main = EXPLAIN[id][sub];
+        body = `<section class="sheet"><div class="eyebrow">Explicación ${sub + 1} de ${n}</div><h2>${s.h}</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}${s.t ? `<p class="body">${hot(s.t, used)}</p>` : ''}${s.v ? s.v() : ''}</section>`;
+      } else {
+        main = EXPLAIN[id][l.steps.length];
+        body = `<section class="sheet"><div class="eyebrow">Resumen · ${n} de ${n}</div><h2>Tu cuadro sinóptico</h2>${sayBtn('m-' + rk, main, 'Explícame el cuadro', 'wide')}
+          ${V.sinop(l.sinop.root, l.sinop.br)}
+          <details class="callout trap"><summary>⚠️ Cuidado en el examen y truco</summary><ul>${l.trap.map(x => `<li>${x}</li>`).join('')}</ul><p class="trick">🧠 <b>Truco:</b> ${l.trick}</p></details></section>`;
+      }
+    } else if (st === 2) {
+      const c = CASES[id][sub];
+      main = `Caso de la vida real. ${c.s} La pregunta es: ${c.q} Piénsalo un momento y después toca: ver respuesta.`;
+      body = `<section class="sheet"><div class="eyebrow">Caso ${sub + 1} de ${n}</div><h2>¿Qué harías?</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}<p class="case-s">${hot(c.s, used)}</p><p class="q-text">${hot(c.q, used)}</p>
+        ${rev ? `<div class="model"><b>Respuesta</b><p>${hot(c.a, used)}</p>${sayBtn('a-' + rk, 'La respuesta es: ' + c.a, 'Escuchar la respuesta')}</div>` : ''}</section>`;
+      if (!rev) primary = `<button class="btn big-n" data-a="reveal">Ver respuesta</button>`;
+    } else if (st === 3) {
+      const q = coreQs(id)[sub]; const ch = S.lq[id + ':' + sub];
+      main = qScript(q, sub + 1);
+      body = `<section class="sheet q"><div class="eyebrow">Pregunta ${sub + 1} de ${n}</div>${sayBtn('m-' + rk, main, 'Léemela', 'wide')}<p class="q-text">${q.q}</p>${vOpts(q, ch, 'lopt')}${ch != null ? vFb(q, ch, 'f-' + rk) : ''}</section>`;
+      if (ch == null) primary = `<button class="btn big-n" disabled>Elige una respuesta</button>`;
+    } else {
+      const ex = l.explain; const keys = S.keys[id] || [];
+      main = `Ahora te toca a ti, ${NAME}. ${ex.q} Escríbelo con tus palabras, aunque sea poquito. No tiene que quedar perfecto. Cuando termines, toca: ver respuesta modelo.`;
+      body = `<section class="sheet"><div class="eyebrow">Último paso</div><h2>Dilo con tus palabras</h2>${sayBtn('m-' + rk, main, 'Explícame', 'wide')}<p class="q-text">${ex.q}</p>
+        <label class="sr" for="note">Tu respuesta</label><textarea id="note" class="ta" data-in="note" placeholder="Escribe aquí, aunque sea poquito…">${(S.notes[id] || '').replace(/</g, '&lt;')}</textarea>
+        ${rev ? `<div class="model"><b>Respuesta modelo</b><p>${ex.model}</p>${sayBtn('a-' + rk, 'Una respuesta modelo sería: ' + ex.model + ' Ahora marca las ideas que sí pusiste.', 'Escuchar')}</div>
+        <div class="stack tight"><b>Marca las ideas que sí pusiste:</b>${ex.keys.map((k, i) => `<label class="check"><input type="checkbox" data-a="key" data-i="${i}" ${keys.includes(i) ? 'checked' : ''}><span>${k}</span></label>`).join('')}</div>` : ''}</section>`;
+      primary = rev ? `<button class="btn big-n" data-a="finish">Terminar estación ✓</button>` : `<button class="btn big-n" data-a="reveal">Ver respuesta modelo</button>`;
+    }
+    UI.mainSay = 'm-' + rk; UI.mainKey = rk;
+    return `<div class="focus">
+      <header class="ftop"><button class="xbtn" data-a="exit">✕ Salir</button><div class="fstep"><b>Paso ${st + 1} de 5 · ${STEP_IC[st]} ${STEP_NAMES[st]}</b><span>${l.icon} ${l.title}</span></div></header>
+      <div class="bar thin" role="progressbar" aria-valuemin="0" aria-valuemax="${tot}" aria-valuenow="${si + 1}" aria-label="Avance de la estación"><i style="width:${Math.round((si + 1) / tot * 100)}%"></i></div>
+      <main class="app focus-main">${body}</main>
+      <footer class="fbot"><button class="back-l" data-a="prev" ${si === 0 ? 'disabled' : ''}>← Atrás</button>${primary}</footer></div>`;
+  }
+
+  /* ¿Qué sigue? */
+  function vNext() {
+    const l = L(UI.fin); const i = idx(UI.fin);
+    const nx = LESSONS.slice(i + 1).find(x => !S.done[x.id]) || LESSONS.find(x => !S.done[x.id]);
+    const nl = nx || null;
+    const text = `¡Terminaste la estación ${l.title}, ${NAME}! Mañana te toca un repaso de cinco preguntas de esta estación; te va a aparecer en Inicio. ${nl ? 'Lo que sigue es: ' + nl.title + '. Si ya estás cansada, descansa: la página guarda tu avance.' : 'Ya terminaste todas las estaciones del capítulo ${CHAP.word}. Ahora puedes hacer un examen de práctica.'}`;
+    return `<main class="app">
+      <section class="card center done-card"><div class="big-emoji" aria-hidden="true">🎉</div><h1>¡Terminaste!</h1><p>${l.icon} <b>${l.title}</b></p></section>
+      <section class="card"><h2>¿Qué sigue?</h2>${sayBtn('next-say', text, 'Escuchar', 'wide')}<div class="plan">
+        <div class="plan-r"><span aria-hidden="true">🔁</span><div><b>Mañana</b><small>Un repaso de 5 preguntas de esta estación. Te aparecerá en Inicio.</small></div></div>
+        ${nl ? `<div class="plan-r"><span aria-hidden="true">${nl.icon}</span><div><b>La siguiente parte</b><small>${nl.title} · págs. ${nl.pages} · unos ${nl.mins} min</small></div></div>` : `<div class="plan-r"><span aria-hidden="true">📝</span><div><b>Ya puedes hacer el examen</b><small>Terminaste todas las estaciones del capítulo ${CHAP.n}.</small></div></div>`}
+      </div></section>
+      ${nl ? `<button class="btn big wide" data-a="open" data-id="${nl.id}"><span class="big-t">Seguir con la siguiente →</span><span class="big-s">${nl.icon} ${nl.title}</span></button>` : `<button class="btn big wide" data-a="go" data-v="exams"><span class="big-t">Hacer el examen →</span></button>`}
+      <button class="btn line wide" data-a="go" data-v="home">☕ Descansar por hoy</button>
+    </main>`;
+  }
+
+  /* Repasar */
+  const GAMES = [
+    { g: 'sinops', ic: '🗂️', t: 'Ver esquemas', s: 'Tus cuadros sinópticos, con voz' },
+    { g: 'audio', ic: '🎧', t: 'Escuchar resúmenes', s: 'Audios cortos de medio minuto' },
+    { g: 'quiz', ic: '✅', t: 'Preguntas', s: 'Por estación o mezcladas' },
+    { g: 'errors', ic: '🩹', t: 'Mis errores', s: '' },
+    { g: 'flash', ic: '🃏', t: 'Tarjetas', s: 'Voltea y recuerda' },
+    { g: 'tf', ic: '⚖️', t: '¿Verdadero o falso?', s: 'Rápido y fácil' },
+    { g: 'order', ic: '🔢', t: 'Ordenar', s: 'Pon las cosas en orden' },
+    { g: 'match', ic: '🔗', t: 'Relacionar', s: 'Une cada pareja' },
+    { g: 'riddle', ic: '🕵️', t: 'Adivina quién soy', s: 'Con pistas' },
+    { g: 'cw', ic: '✏️', t: 'Crucigrama', s: '15 palabras del capítulo' }
+  ];
+  function vReview() {
+    return `<main class="app"><h1>Repasar</h1><p class="muted">Elige una forma de repasar. Las dos primeras son con esquemas y audio, como te gusta.</p>
+    <div class="tiles">${GAMES.map(x => `<button class="tile ${x.g === 'sinops' || x.g === 'audio' ? 'fav' : ''}" data-a="game" data-g="${x.g}"><span class="ti" aria-hidden="true">${x.ic}</span><b>${x.t}</b><span>${x.g === 'errors' ? (S.wrong.length ? S.wrong.length + ' por repasar' : 'Aún no tienes') : x.s}</span></button>`).join('')}</div></main>`;
+  }
+  function startGame(g, extra) {
+    stop();
+    const G = { g };
+    if (g === 'quiz') G.pick = true;
+    if (g === 'errors') { if (!S.wrong.length) { toast('¡No tienes errores guardados!'); return; } Object.assign(G, { g: 'quiz', list: shuffle(S.wrong).slice(0, 10), i: 0, ch: null, ok: 0, errors: true, title: 'Mis errores' }); }
+    if (g === 'flash') Object.assign(G, { list: FLASH.map((_, i) => i), i: 0, flip: false });
+    if (g === 'tf') Object.assign(G, { list: shuffle(TF.map((_, i) => i)), i: 0, pick: null, ok: 0 });
+    if (g === 'order') G.gi = null;
+    if (g === 'match') G.gi = null;
+    if (g === 'riddle') Object.assign(G, { i: 0, n: 1, show: false });
+    if (g === 'vocab') { const list = shuffle(GLOSSARY.map(x => x.k)).slice(0, 8); Object.assign(G, { list, i: 0, ch: null, ok: 0, opts: list.map(k => shuffle([k].concat(shuffle(GLOSSARY.map(x => x.k).filter(x => x !== k)).slice(0, 3)))) }); }
+    if (extra) Object.assign(G, extra);
+    UI.game = G; UI.view = 'game'; render(); top();
+  }
+  function startQuiz(list, title, extra) { UI.game = Object.assign({ g: 'quiz', list, i: 0, ch: null, ok: 0, title }, extra || {}); UI.view = 'game'; render(); top(); }
+
+  function vGame() {
+    const G = UI.game; const back = backTo('review', 'Repasar');
+    if (G.g === 'sinops') {
+      return `<main class="app">${back}<h1>Esquemas</h1><p class="muted">Toca «Explícame el cuadro» y escucha rama por rama.</p>
+        <section class="card"><h2>Todo el capítulo</h2>${V.sinop(BIG_SINOP.root, BIG_SINOP.br)}</section>
+        ${LESSONS.map(l => `<section class="card"><div class="eyebrow">${l.icon} págs. ${l.pages}</div><h2>${l.title}</h2>${sayBtn('sn-' + l.id, EXPLAIN[l.id][l.steps.length], 'Explícame el cuadro', 'wide')}${V.sinop(l.sinop.root, l.sinop.br)}</section>`).join('')}</main>`;
+    }
+    if (G.g === 'audio') {
+      return `<main class="app">${back}<h1>Escuchar resúmenes</h1><p class="muted">Cada audio dura más o menos medio minuto. Puedes escucharlos mientras haces otra cosa.</p>
+        ${LESSONS.map(l => `<section class="card audio-row"><div><b>${l.icon} ${l.title}</b><div class="small muted">págs. ${l.pages}</div></div>${sayBtn('au-' + l.id, AUDIO[l.id], 'Escuchar')}</section>`).join('')}
+        <section class="card audio-row"><div><b>🎧 Todo seguido</b><div class="small muted">Unos 3 minutos</div></div>${sayBtn('au-all', LESSONS.map(l => AUDIO[l.id]).join(' '), 'Escuchar todo')}</section></main>`;
+    }
+    if (G.g === 'quiz' && G.pick) {
+      return `<main class="app">${back}<h1>Preguntas</h1><p class="muted">¿De qué parte quieres preguntas?</p><div class="route">
+        <button class="lrow" data-a="quizAll"><span class="n">★</span><span><span class="tt">Mezcladas</span><span class="meta">10 preguntas de todo el capítulo</span></span><span class="ic">›</span></button>
+        ${LESSONS.map((l, i) => `<button class="lrow" data-a="quizSt" data-id="${l.id}"><span class="n">${i + 1}</span><span><span class="tt">${l.icon} ${l.title}</span><span class="meta">${byT(l.id).length} preguntas</span></span><span class="ic">›</span></button>`).join('')}</div></main>`;
+    }
+    if (G.g === 'quiz') {
+      if (G.i >= G.list.length) {
+        const n = G.list.length;
+        return `<main class="app">${back}<section class="card grade"><span class="eyebrow">${G.title}</span><b>${G.ok}/${n}</b><p>${G.ok === n ? `¡Perfecto, ${NAME}!` : G.ok >= n * 0.7 ? '¡Muy bien! Ya casi lo dominas.' : 'Vas aprendiendo. Las que fallaste quedan en «Mis errores».'}</p>
+          <div class="row"><button class="btn" data-a="game" data-g="${G.spaced ? 'quiz' : (G.errors ? 'errors' : 'quiz')}">Otra ronda</button><button class="btn line" data-a="go" data-v="${G.spaced ? 'home' : 'review'}">${G.spaced ? 'Volver al inicio' : 'Volver'}</button></div></section></main>`;
+      }
+      const q = QB[G.list[G.i]];
+      return `<main class="app">${back}<div class="spread"><span class="eyebrow">${G.title}</span><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card q">${sayBtn('gq-' + G.i, qScript(q), 'Léemela', 'wide')}<p class="q-text">${q.q}</p>${vOpts(q, G.ch, 'gopt')}${G.ch != null ? vFb(q, G.ch, 'gf-' + G.i) : ''}</section>
+        ${G.ch != null ? `<button class="btn big-n wide" data-a="gnext">Siguiente →</button>` : ''}</main>`;
+    }
+    if (G.g === 'flash') {
+      const f = FLASH[G.list[G.i]];
+      return `<main class="app">${back}<div class="spread"><h1>Tarjetas</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <button class="flip ${G.flip ? 'on' : ''}" data-a="flip" aria-label="Voltear tarjeta"><div class="flip-in"><div class="face front"><div><small>${L(f[0]).title}</small>${f[1]}<small class="hint-s">Toca para voltear</small></div></div><div class="face back"><div>${f[2]}</div></div></div></button>
+        ${sayBtn('fl-' + G.i, f[1] + '. ' + f[2], 'Escuchar', 'wide')}
+        <div class="nav-btns"><button class="btn line" data-a="fprev" ${G.i === 0 ? 'disabled' : ''}>← Anterior</button><button class="btn" data-a="fnext">${G.i === G.list.length - 1 ? 'Empezar de nuevo' : 'Siguiente →'}</button></div></main>`;
+    }
+    if (G.g === 'tf') {
+      if (G.i >= G.list.length) return `<main class="app">${back}<section class="card grade"><span class="eyebrow">Verdadero o falso</span><b>${G.ok}/${G.list.length}</b><div class="row"><button class="btn" data-a="game" data-g="tf">Otra vez</button><button class="btn line" data-a="go" data-v="review">Volver</button></div></section></main>`;
+      const t = TF[G.list[G.i]]; const ok = G.pick != null && G.pick === t[1];
+      return `<main class="app">${back}<div class="spread"><h1>¿Verdadero o falso?</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card tf-card">${t[0]}</section>${sayBtn('tf-' + G.i, t[0] + ' ¿Verdadero o falso?', 'Léemela', 'wide')}
+        ${G.pick == null ? `<div class="tf-btns"><button class="btn big-n" data-a="tf" data-v="1">Verdadero</button><button class="btn big-n ghost" data-a="tf" data-v="0">Falso</button></div>`
+        : `<div class="fb ${ok ? 'ok' : 'no'}"><b class="h">${ok ? '¡Correcto!' : 'Casi.'}</b><p>Es <b>${t[1] ? 'verdadero' : 'falso'}</b>. ${t[2]}</p>${sayBtn('tff-' + G.i, (ok ? '¡Correcto! ' : 'Casi. ') + 'Es ' + (t[1] ? 'verdadero. ' : 'falso. ') + t[2], 'Explícame')}</div><button class="btn big-n wide" data-a="tfnext">Siguiente →</button>`}</main>`;
+    }
+    if (G.g === 'order') {
+      if (G.gi == null) return `<main class="app">${back}<h1>Ordenar</h1><div class="route">${ORDER_GAMES.map((o, i) => `<button class="lrow" data-a="ordPick" data-i="${i}"><span class="n">${i + 1}</span><span class="tt">${o.t}</span><span class="ic">›</span></button>`).join('')}</div></main>`;
+      const o = ORDER_GAMES[G.gi];
+      return `<main class="app">${backTo('review', 'Repasar')}<h1>Ordenar</h1><p class="q-text">${o.t}</p><p class="small muted">Usa las flechas ↑ ↓ para mover cada tarjeta.</p>
+        <div class="order-list">${G.arr.map((it, i) => { const cls = G.checked ? (it === i ? 'good' : 'badp') : '';
+          return `<div class="order-item ${cls}"><span class="on">${i + 1}</span><span>${o.items[it]}</span><span class="mv"><button data-a="ordUp" data-i="${i}" ${i === 0 ? 'disabled' : ''} aria-label="Subir">↑</button><button data-a="ordDn" data-i="${i}" ${i === G.arr.length - 1 ? 'disabled' : ''} aria-label="Bajar">↓</button></span></div>`; }).join('')}</div>
+        ${G.checked ? `<div class="fb ${G.arr.every((x, i) => x === i) ? 'ok' : 'no'}"><b class="h">${G.arr.every((x, i) => x === i) ? '¡Perfecto!' : 'Casi. Las verdes ya están bien.'}</b></div>` : ''}
+        <div class="nav-btns"><button class="btn" data-a="ordCheck">Revisar</button><button class="btn line" data-a="ordPick" data-i="${(G.gi + 1) % ORDER_GAMES.length}">Otro</button></div></main>`;
+    }
+    if (G.g === 'match') {
+      if (G.gi == null) return `<main class="app">${back}<h1>Relacionar</h1><div class="route">${MATCH_GAMES.map((o, i) => `<button class="lrow" data-a="matPick" data-i="${i}"><span class="n">${i + 1}</span><span class="tt">${o.t}</span><span class="ic">›</span></button>`).join('')}</div></main>`;
+      const m = MATCH_GAMES[G.gi]; const all = G.done.length === m.pairs.length;
+      return `<main class="app">${backTo('review', 'Repasar')}<h1>Relacionar</h1><p class="q-text">${m.t}</p><p class="small muted">Toca una palabra de la izquierda y luego su pareja de la derecha.</p>
+        <div class="match-grid"><div class="stack">${m.pairs.map((p, i) => `<button class="${G.done.includes(i) ? 'done' : ''} ${G.sel === i ? 'sel' : ''}" data-a="matL" data-i="${i}" ${G.done.includes(i) ? 'disabled' : ''}>${p[0]}</button>`).join('')}</div>
+        <div class="stack">${G.right.map(j => `<button class="${G.done.includes(j) ? 'done' : ''} ${G.err === j ? 'err' : ''}" data-a="matR" data-i="${j}" ${G.done.includes(j) ? 'disabled' : ''}>${m.pairs[j][1]}</button>`).join('')}</div></div>
+        ${all ? `<div class="fb ok"><b class="h">¡Todas unidas!</b></div><button class="btn wide" data-a="matPick" data-i="${(G.gi + 1) % MATCH_GAMES.length}">Siguiente juego →</button>` : ''}</main>`;
+    }
+    if (G.g === 'riddle') {
+      const r = RIDDLES[G.i];
+      return `<main class="app">${back}<div class="spread"><h1>Adivina quién soy</h1><span class="small muted tnum">${G.i + 1} de ${RIDDLES.length}</span></div>
+        <section class="card">${r.c.slice(0, G.n).map((c, i) => `<p class="clue-r"><span class="chip">Pista ${i + 1}</span><span>${c}</span></p>`).join('')}
+        ${sayBtn('rd-' + G.i + '-' + G.n, 'Adivina quién soy. ' + r.c.slice(0, G.n).join(' '), 'Léeme las pistas')}
+        ${G.show ? `<div class="model"><b>Soy…</b><p class="vt">${r.a}</p></div>` : ''}</section>
+        <div class="nav-btns">${!G.show && G.n < r.c.length ? `<button class="btn line" data-a="rdMore">Otra pista</button>` : ''}${G.show ? `<button class="btn" data-a="rdNext">Siguiente →</button>` : `<button class="btn" data-a="rdShow">¿Quién soy?</button>`}</div></main>`;
+    }
+    if (G.g === 'vocab') {
+      if (G.i >= G.list.length) return `<main class="app">${backTo('words', 'Palabras')}<section class="card grade"><span class="eyebrow">Palabras</span><b>${G.ok}/${G.list.length}</b><div class="row"><button class="btn" data-a="game" data-g="vocab">Otra vez</button><button class="btn line" data-a="go" data-v="words">Volver</button></div></section></main>`;
+      const g = GL[G.list[G.i]]; const opts = G.opts[G.i];
+      return `<main class="app">${backTo('words', 'Palabras')}<div class="spread"><h1>¿Qué palabra es?</h1><span class="small muted tnum">${G.i + 1} de ${G.list.length}</span></div>
+        <section class="card q"><p class="q-text">${g.d}</p>${sayBtn('vq-' + G.i, '¿Qué palabra es? ' + g.d, 'Léemela', 'wide')}
+        <div class="opts">${opts.map((k, i) => { let c = ''; if (G.ch != null) { if (k === g.k) c = 'ok'; else if (i === G.ch) c = 'no'; } return `<button class="opt ${c}" data-a="vopt" data-i="${i}" ${G.ch != null ? 'disabled' : ''}><span class="ov">${LET[i]}</span><span>${GL[k].t}</span></button>`; }).join('')}</div>
+        ${G.ch != null ? `<div class="fb ${opts[G.ch] === g.k ? 'ok' : 'no'}"><b class="h">${opts[G.ch] === g.k ? '¡Muy bien!' : 'Casi.'}</b><p>Es <b>${g.t}</b>. Ejemplo: ${g.ex}</p></div>` : ''}</section>
+        ${G.ch != null ? `<button class="btn big-n wide" data-a="vnext">Siguiente →</button>` : ''}</main>`;
+    }
+    if (G.g === 'cw') return vCW();
+    return `<main class="app">${back}</main>`;
+  }
+
+  /* Crucigrama */
+  const CWC = (() => {
+    const cells = {}; const nums = {};
+    const starts = CW.words.map((w, i) => ({ i, r: w.r, c: w.col })).sort((a, b) => a.r - b.r || a.c - b.c);
+    let n = 0; starts.forEach(s => { const k = s.r + '-' + s.c; if (!nums[k]) nums[k] = ++n; CW.words[s.i].n = nums[k]; });
+    CW.words.forEach((w, wi) => { for (let i = 0; i < w.w.length; i++) { const r = w.d === 'A' ? w.r : w.r + i, c = w.d === 'A' ? w.col + i : w.col; const k = r + '-' + c; (cells[k] = cells[k] || { ch: w.w[i], ws: [] }).ws.push(wi); } });
+    return { cells, nums };
+  })();
+  const cwKeys = wi => { const w = CW.words[wi]; const out = []; for (let i = 0; i < w.w.length; i++) out.push(w.d === 'A' ? w.r + '-' + (w.col + i) : (w.r + i) + '-' + w.col); return out; };
+  const cwSolved = wi => cwKeys(wi).every(k => (S.cw[k] || '') === CWC.cells[k].ch);
+  function vCW() {
+    const hl = UI.cwWord != null ? new Set(cwKeys(UI.cwWord)) : new Set();
+    let grid = '';
+    for (let r = 0; r < CW.H; r++) for (let c = 0; c < CW.W; c++) {
+      const k = r + '-' + c, cell = CWC.cells[k];
+      if (!cell) { grid += '<span class="cw-x"></span>'; continue; }
+      const v = S.cw[k] || ''; let cls = hl.has(k) ? 'hl' : '';
+      if (UI.cwCheck && v) cls += v === cell.ch ? ' good' : ' bad';
+      grid += `<label class="cw-c ${cls}">${CWC.nums[k] ? `<i>${CWC.nums[k]}</i>` : ''}<input data-cw="${k}" maxlength="2" value="${v}" autocomplete="off" autocorrect="off" spellcheck="false" autocapitalize="characters" aria-label="Casilla"></label>`;
+    }
+    const solved = CW.words.filter((_, i) => cwSolved(i)).length;
+    const clue = (d, t) => `<h3>${t}</h3><div class="clues">${CW.words.map((w, i) => ({ w, i })).filter(x => x.w.d === d).sort((a, b) => a.w.n - b.w.n).map(x => `<button class="clue ${UI.cwWord === x.i ? 'on' : ''} ${cwSolved(x.i) ? 'solved' : ''}" data-a="cwClue" data-i="${x.i}"><b>${x.w.n}</b><span>${x.w.c} <small class="muted">(${x.w.w.length})</small></span></button>`).join('')}</div>`;
+    const cur = UI.cwWord != null ? CW.words[UI.cwWord] : null;
+    return `<main class="app">${backTo('review', 'Repasar')}<div class="spread"><h1>Crucigrama</h1><span class="chip">${solved} de ${CW.words.length}</span></div>
+      <p class="small muted">Toca una pista y escribe. Sin acentos.</p>
+      ${cur ? `<div class="card cw-now"><b>${cur.n} ${cur.d === 'A' ? '→' : '↓'}</b> ${cur.c}</div>` : ''}
+      <div class="cw-wrap"><div class="cw" style="grid-template-columns:repeat(${CW.W}, var(--cw))">${grid}</div></div>
+      <div class="nav-btns"><button class="btn" data-a="cwCheck">Revisar</button><button class="btn line" data-a="cwClear">Borrar todo</button></div>
+      ${clue('A', 'Horizontales →')}${clue('D', 'Verticales ↓')}</main>`;
+  }
+
+  /* Palabras */
+  function vWords() {
+    return `<main class="app"><h1>Palabras</h1><p class="muted">Las palabras difíciles del capítulo, con ejemplo. También aparecen subrayadas con <span class="hw-demo">puntitos<span class="hw-q">?</span></span> dentro de las estaciones.</p>
+      <button class="btn ghost wide" data-a="game" data-g="vocab">🎯 Juego: ¿qué palabra es?</button>
+      <label class="sr" for="gq">Buscar palabra</label><input id="gq" class="search" data-in="gq" type="search" placeholder="Buscar palabra…" value="${UI.q.replace(/"/g, '&quot;')}">
+      <div class="gloss" id="glist">${glossList()}</div></main>`;
+  }
+  function glossList() {
+    const q = UI.q.trim().toLowerCase();
+    const list = GLOSSARY.filter(g => !q || (g.t + ' ' + g.d).toLowerCase().includes(q)).sort((a, b) => a.t.localeCompare(b.t, 'es'));
+    if (!list.length) return '<p class="muted">No encontré esa palabra.</p>';
+    return list.map(g => `<div class="gterm"><div class="spread"><b>${g.t}</b><span class="chip">pág. ${g.p}</span></div><p>${g.d}</p><p class="gex">Ejemplo: ${g.ex}</p>${sayBtn('w-' + g.k, g.t + '. ' + g.d + ' Por ejemplo: ' + g.ex, 'Escuchar')}</div>`).join('');
+  }
+
+  /* Exámenes */
+  function vExams() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Exámenes de práctica</h1><p class="muted">Una pregunta por pantalla. Al final ves tu calificación del 0 al 10 y la explicación de cada respuesta.</p>
+      ${EXAMS.map(e => `<section class="card exrow"><div><b class="exn">${e.t}</b><div class="small muted">${e.s}</div>${S.exams[e.id] != null ? `<div class="small ok-n">Tu mejor calificación: ${S.exams[e.id]}</div>` : ''}</div><button class="btn" data-a="exStart" data-id="${e.id}">Empezar</button></section>`).join('')}</main>`;
+  }
+  function vExam() {
+    const X = UI.ex; const e = EXAMS.find(x => x.id === X.id);
+    if (X.done) {
+      const ok = e.qs.filter(id => X.ans[id] === QB[id].a).length; const g = Math.round(ok / e.qs.length * 100) / 10;
+      return `<main class="app">${backTo('exams', 'Exámenes')}<section class="card grade"><span class="eyebrow">${e.t}</span><b>${g}</b><p>${ok} de ${e.qs.length} correctas</p>${sayBtn('exg', `Tu calificación es ${String(g).replace('.', ' punto ')}. Tuviste ${ok} de ${e.qs.length} correctas. ${g >= 8 ? '¡Excelente trabajo, ' + NAME + '!' : g >= 6 ? 'Vas bien. Repasa las que fallaste.' : 'No te preocupes: repasa las estaciones y vuelve a intentarlo.'}`, 'Escuchar')}</section>
+        <section class="card"><h2>Revisión</h2>${e.qs.map((id, i) => { const q = QB[id]; const y = X.ans[id]; const good = y === q.a;
+          return `<div class="review-item"><b>${i + 1}. ${q.q}</b>${good ? `<span class="ok">✓ ${q.o[q.a]}</span>` : `<span class="yo">✗ Tu respuesta: ${y == null ? '(sin responder)' : q.o[y]}</span><span class="ok">✓ Correcta: ${q.o[q.a]}</span>`}<span class="small muted">${q.e} · pág. ${q.p}</span></div>`; }).join('')}</section>
+        <button class="btn wide" data-a="exStart" data-id="${e.id}">Intentar de nuevo</button></main>`;
+    }
+    const q = QB[e.qs[X.i]]; const ch = X.ans[q.id];
+    return `<main class="app">${backTo('exams', 'Salir del examen')}<div class="spread"><span class="eyebrow">${e.t}</span><span class="small muted tnum">${X.i + 1} de ${e.qs.length}</span></div>
+      <section class="card q">${q.f ? `<span class="chip fmt">${q.f}</span>` : ''}${sayBtn('exq-' + X.i, qScript(q, X.i + 1), 'Léemela', 'wide')}<p class="q-text">${q.q}</p>
+        <div class="opts">${q.o.map((o, i) => `<button class="opt ${ch === i ? 'picked' : ''}" data-a="exOpt" data-i="${i}"><span class="ov">${LET[i]}</span><span>${o}</span></button>`).join('')}</div></section>
+      <div class="nav-btns"><button class="btn line" data-a="exPrev" ${X.i === 0 ? 'disabled' : ''}>← Anterior</button>${X.i < e.qs.length - 1 ? `<button class="btn" data-a="exNext">Siguiente →</button>` : `<button class="btn" data-a="exEnd">Terminar y calificar</button>`}</div>
+      <div class="qnav" aria-label="Ir a pregunta">${e.qs.map((id, i) => `<button class="${X.ans[id] != null ? 'ans' : ''} ${i === X.i ? 'cur' : ''}" data-a="exGo" data-i="${i}">${i + 1}</button>`).join('')}</div></main>`;
+  }
+
+  /* Hoja de repaso */
+  function vHoja() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Hoja de repaso</h1><p class="muted">Primero mira el esquema. Luego, en los cuadros, intenta recordar y toca cada casilla para destapar la respuesta.</p>
+      <section class="card"><h2>Todo el capítulo en un cuadro sinóptico</h2>${sayBtn('hj', `Todo el capítulo ${CHAP.word} en un cuadro. ` + LESSONS.filter(l => !l.bridge).map(l => AUDIO[l.id]).join(' '), 'Explícame todo', 'wide')}${V.sinop(BIG_SINOP.root, BIG_SINOP.br)}</section>
+      ${COMPARE.map((t, ti) => `<section class="card"><div class="spread"><h2>${t.t}</h2><button class="btn small line" data-a="rvAll" data-i="${ti}">Destapar todo</button></div>
+        <div class="tbl-wrap"><table class="tbl rvt"><thead><tr>${t.head.map(h => `<th>${h}</th>`).join('')}</tr></thead><tbody>${t.rows.map((r, ri) => `<tr><th scope="row">${r[0]}</th>${r.slice(1).map((c, ci) => { const k = ti + '-' + ri + '-' + ci; const o = UI.rv[k];
+          return `<td><button class="rv ${o ? 'open' : ''}" data-a="rv" data-k="${k}">${o ? c : '<span>Toca para ver</span>'}</button></td>`; }).join('')}</tr>`).join('')}</tbody></table></div></section>`).join('')}</main>`;
+  }
+
+  /* Videos */
+  function vVideos() {
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Videos y lecturas</h1><p class="muted">Son búsquedas en YouTube: elige un video corto de una universidad o de un profesor. Si un video contradice al libro, quédate con el libro.</p>
+      ${VIDEOS.map(v => `<section class="card vrow"><div><b>${v.t}</b><div class="small muted">${L(v.s).icon} ${L(v.s).title}</div></div><a class="btn small" href="https://www.youtube.com/results?search_query=${encodeURIComponent(v.q)}" target="_blank" rel="noopener">Buscar ▶</a></section>`).join('')}
+      <h2>Lecturas oficiales</h2>${READINGS.map(r => `<section class="card"><b>${r.t}</b><span class="small muted">${r.s}</span><a class="link" href="${r.url}" target="_blank" rel="noopener">Abrir ↗</a></section>`).join('')}</main>`;
+  }
+
+  /* Avance y voz */
+  function vAvance() {
+    const ans = Object.keys(S.ans); const ok = ans.filter(k => S.ans[k]).length;
+    const nDone = LESSONS.filter(l => S.done[l.id]).length;
+    const rates = [[0.8, 'Lenta'], [0.95, 'Normal'], [1.15, 'Rápida']];
+    return `<main class="app">${backTo('home', 'Inicio')}<h1>Mi avance</h1>
+      <div class="stats"><div class="stat"><b>${nDone}/${LESSONS.length}</b><span>estaciones</span></div><div class="stat"><b>${ans.length ? Math.round(ok / ans.length * 100) : 0}%</b><span>aciertos (${ok} de ${ans.length})</span></div><div class="stat"><b>${streak()}</b><span>días seguidos</span></div></div>
+      <section class="card"><h2>Por estación</h2>${LESSONS.map(l => { const p = S.done[l.id] ? 100 : Math.round(screenIndex(l.id, pos(l.id).step, pos(l.id).sub) / totalScreens(l.id) * 100);
+        return `<div class="unitbar"><div class="spread small"><span>${l.icon} ${l.title}</span><span class="tnum">${p}%</span></div><div class="bar ${p === 100 ? 'ok' : ''}"><i style="width:${p}%"></i></div></div>`; }).join('')}</section>
+      <section class="card"><h2>La voz que explica</h2><p class="small muted">Velocidad:</p><div class="row">${rates.map(r => `<button class="icon-btn ${Math.abs(S.rate - r[0]) < 0.01 ? 'on' : ''}" data-a="rate" data-v="${r[0]}">${r[1]}</button>`).join('')}</div>
+        ${sayBtn('test', `Hola, ${NAME}. Así suena mi voz. Si quieres, la puedo hacer más lenta o más rápida.`, 'Probar la voz')}
+        <label class="check"><input type="checkbox" data-a="auto" ${S.auto ? 'checked' : ''}><span><b>Que la voz explique sola</b><br><small class="muted">Al abrir cada pantalla de estudio, la voz empieza a explicar sin que toques nada.</small></span></label>
+        ${synth ? '' : '<p class="ojo small">Este navegador no tiene voz. Abre la página en Chrome.</p>'}</section>
+      <section class="card"><h2>Otras opciones</h2><button class="btn line wide" data-a="tour">▶ Ver otra vez cómo se usa</button><button class="btn line wide danger" data-a="reset">Borrar mi avance</button></section></main>`;
+  }
+
+  /* Recorrido guiado */
+  function mock(k) {
+    if (k === 'hello') return `<div class="phone"><div class="m-hero">Buenas tardes, ${NAME}</div><div class="m-btn">Continuar →</div><div class="m-line">▶ Ver cómo se usa</div></div>`;
+    if (k === 'continue') return `<div class="phone"><div class="m-hero">Buenas tardes, ${NAME}</div><div class="m-btn pulse">Continuar →<small>Paso 2 de 5: Entender</small></div></div>`;
+    if (k === 'steps') return `<div class="phone"><div class="m-steps">${STEP_NAMES.map((s, i) => `<span class="${i < 2 ? 'on' : ''}">${STEP_IC[i]}<br>${s}</span>`).join('')}</div></div>`;
+    if (k === 'read') return `<div class="phone"><div class="fr-where small"><div><span class="lab">Empieza en</span>«${CHAP.tourRead[0]}…»</div><div><span class="lab">Termina en</span>«…${CHAP.tourRead[1]}»</div></div><div class="m-btn pulse">Ya lo leí ✓</div></div>`;
+    if (k === 'voice') return `<div class="phone"><div class="say wide on pulse"><span class="ic">🔊</span><span class="lbl">Explícame</span></div><div class="m-line">Lenta · Normal · Rápida</div></div>`;
+    if (k === 'word') return `<div class="phone"><p>${CHAP.tourWord[0]}<span class="hw-demo">${CHAP.tourWord[1]}<span class="hw-q">?</span></span>${CHAP.tourWord[2]}</p><div class="m-sheet"><b>${CHAP.tourWord[3]}</b><br><small>${CHAP.tourWord[4]}</small></div></div>`;
+    return `<div class="phone"><div class="m-sheet center">☕<br><b>Llevas 10 minutos</b><br><small>La página guarda dónde ibas</small></div></div>`;
+  }
+  function vTour() {
+    const T = UI.tour; const s = TOUR[T.i];
+    return `<div class="focus tour">
+      <header class="ftop"><button class="xbtn" data-a="tourX">✕ Salir</button><div class="fstep"><b>Cómo se usa la página</b><span>${T.i + 1} de ${TOUR.length}</span></div></header>
+      <div class="bar thin"><i style="width:${Math.round((T.i + 1) / TOUR.length * 100)}%"></i></div>
+      <main class="app focus-main"><section class="sheet center tour-s"><div class="big-emoji" aria-hidden="true">${s.ic}</div><h2>${s.t}</h2>${mock(s.mock)}<p class="body">${s.s}</p></section></main>
+      <footer class="fbot"><button class="back-l" data-a="tourPrev" ${T.i === 0 ? 'disabled' : ''}>← Atrás</button>
+        <button class="btn line" data-a="tourPlay">${T.play ? '⏸ Pausa' : '▶ Seguir'}</button>
+        ${T.i < TOUR.length - 1 ? `<button class="btn big-n" data-a="tourNext">Siguiente →</button>` : `<button class="btn big-n" data-a="tourEnd">¡Empezar!</button>`}</footer></div>`;
+  }
+
+  /* Hoja de palabra y avisos */
+  function vSheet() {
+    const g = GL[UI.sheet]; if (!g) return '';
+    return `<div class="scrim" data-a="sheetX"></div><div class="bsheet" role="dialog" aria-modal="true" aria-label="${g.t}"><div class="grab" aria-hidden="true"></div><div class="eyebrow">Palabra difícil · libro, pág. ${g.p}</div><h2>${g.t}</h2><p class="body">${g.d}</p><p class="gex"><b>Ejemplo:</b> ${g.ex}</p>
+      <div class="nav-btns">${sayBtn('gl-' + g.k, g.t + '. ' + g.d + ' Por ejemplo: ' + g.ex, 'Escuchar')}<button class="btn" data-a="sheetX">Entendido</button></div></div>`;
+  }
+  function vModal() {
+    if (UI.modal === 'pause') return `<div class="scrim"></div><div class="modal" role="dialog" aria-modal="true" aria-label="Descanso"><div class="big-emoji" aria-hidden="true">☕</div><h2>Llevas 10 minutos</h2><p>Lo estás haciendo muy bien, ${NAME}. Puedes descansar: la página guarda dónde ibas.</p>
+      <button class="btn wide" data-a="rest">Descansar ahora</button><button class="btn line wide" data-a="more5">Seguir 5 minutos más</button></div>`;
+    return '';
+  }
+
+  /* ═════════ RENDER ═════════ */
+  function render() {
+    SAY = {};
+    const v = UI.view; let html;
+    if (v === 'lesson') html = vLesson();
+    else if (v === 'tour') html = vTour();
+    else {
+      html = ({ home: vHome, study: vStudy, next: vNext, review: vReview, game: vGame, words: vWords, exams: vExams, exam: vExam, hoja: vHoja, videos: vVideos, avance: vAvance }[v] || vHome)();
+      html += vTabs();
+    }
+    if (UI.sheet) html += vSheet();
+    if (UI.modal) html += vModal();
+    app.innerHTML = html;
+    after();
+  }
+  function after() {
+    if (UI.view === 'lesson' && S.auto && !UI.modal && UI.autoKey !== UI.mainKey) { UI.autoKey = UI.mainKey; const id = UI.mainSay; setTimeout(() => { if (SAY[id] && UI.view === 'lesson') speak(SAY[id], id); }, 350); }
+    if (UI.view === 'tour' && UI.tour.play && UI.tour.spoken !== UI.tour.i) {
+      const i = UI.tour.i; UI.tour.spoken = i;
+      speak(TOUR[i].s, 'tour', () => { setTimeout(() => { if (UI.view === 'tour' && UI.tour.play && UI.tour.i === i && i < TOUR.length - 1) { UI.tour.i++; render(); } }, 700); });
+    }
+    if (UI.sheet) { const b = app.querySelector('.bsheet .btn'); if (b) b.focus({ preventScroll: true }); }
+  }
+  function go(v) { stop(); UI.view = v; UI.sheet = null; UI.modal = null; render(); top(); }
+  function openLesson(id) { stop(); S.at = id; save(); markDay(); UI.st = id; UI.view = 'lesson'; UI.t0 = Date.now(); UI.autoKey = ''; render(); top(); }
+  function move(d) {
+    const id = UI.st; let { step, sub } = pos(id);
+    if (d > 0) { if (sub + 1 < count(id, step)) sub++; else if (step < 4) { step++; sub = 0; toast(`Paso ${step + 1} de 5: ${STEP_NAMES[step]} ${STEP_IC[step]}`); } }
+    else { if (sub > 0) sub--; else if (step > 0) { step--; sub = count(id, step) - 1; } }
+    S.pos[id] = { step, sub }; save(); stop(); render(); top();
+  }
+
+  /* ═════════ EVENTOS ═════════ */
+  document.addEventListener('click', ev => {
+    const el = ev.target.closest('[data-a]'); if (!el || el.disabled) return;
+    const a = el.dataset.a; const G = UI.game;
+    switch (a) {
+      case 'go': go(el.dataset.v); break;
+      case 'cont': { const nx = nextStation(); if (nx) openLesson(nx); break; }
+      case 'open': openLesson(el.dataset.id); break;
+      case 'exit': stop(); UI.view = 'home'; render(); top(); toast('Guardado. Aquí te espera el botón Continuar.'); break;
+      case 'next': move(1); break;
+      case 'prev': move(-1); break;
+      case 'reveal': { const p = pos(UI.st); S.reveal[`${UI.st}:${p.step}:${p.sub}`] = true; save(); stop(); render();
+        if (S.auto) { const b = app.querySelector('[data-id^="a-"]'); if (b) speak(SAY[b.dataset.id], b.dataset.id); }
+        const m = app.querySelector('.model'); if (m) m.scrollIntoView({ behavior: 'smooth', block: 'center' }); break; }
+      case 'lopt': { const p = pos(UI.st); const k = UI.st + ':' + p.sub; if (S.lq[k] != null) break; const q = coreQs(UI.st)[p.sub]; const i = +el.dataset.i; S.lq[k] = i; rec(q, i === q.a); stop(); render();
+        const f = app.querySelector('.fb'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        if (S.auto) { const b = app.querySelector('.fb [data-a="say"]'); if (b) speak(SAY[b.dataset.id], b.dataset.id); } break; }
+      case 'key': { const id = UI.st; const i = +el.dataset.i; const k = S.keys[id] || []; S.keys[id] = el.checked ? k.concat(i) : k.filter(x => x !== i); save(); break; }
+      case 'finish': { document.querySelectorAll('.toast').forEach(t => t.remove()); const id = UI.st; S.done[id] = S.done[id] || today(); S.sp[id] = S.sp[id] || []; S.pos[id] = { step: 0, sub: 0 };
+        Object.keys(S.reveal).forEach(k => { if (k.indexOf(id + ':') === 0) delete S.reveal[k]; }); Object.keys(S.lq).forEach(k => { if (k.indexOf(id + ':') === 0) delete S.lq[k]; });
+        const nx = LESSONS.find(l => !S.done[l.id]); S.at = nx ? nx.id : id; save(); stop(); UI.fin = id; UI.view = 'next'; render(); top(); break; }
+      case 'say': { const id = el.dataset.id; if (speakingId === id) stop(); else speak(SAY[id], id); break; }
+      case 'gl': ev.preventDefault(); UI.sheet = el.dataset.k; render(); break;
+      case 'sheetX': stop(); UI.sheet = null; render(); break;
+      case 'rest': UI.modal = null; stop(); UI.view = 'home'; render(); top(); toast('Guardado. ¡Buen descanso!'); break;
+      case 'more5': UI.modal = null; UI.t0 = Date.now() - PAUSE_MS + 5 * 60 * 1000; render(); break;
+      case 'tour': stop(); UI.tour = { i: 0, play: true, spoken: -1 }; UI.view = 'tour'; render(); top(); break;
+      case 'tourNext': if (UI.tour.i < TOUR.length - 1) { stop(); UI.tour.i++; UI.tour.spoken = -1; render(); } break;
+      case 'tourPrev': if (UI.tour.i > 0) { stop(); UI.tour.i--; UI.tour.spoken = -1; render(); } break;
+      case 'tourPlay': UI.tour.play = !UI.tour.play; if (!UI.tour.play) stop(); else UI.tour.spoken = -1; render(); break;
+      case 'tourX': case 'tourEnd': stop(); S.tour = true; save(); UI.view = 'home'; render(); top(); break;
+      case 'spaced': { const id = el.dataset.id; const list = shuffle(byT(id).map(q => q.id)).slice(0, 5); startQuiz(list, 'Repaso de hoy · ' + L(id).title, { spaced: id }); break; }
+      case 'game': startGame(el.dataset.g); break;
+      case 'quizAll': startQuiz(shuffle(BANK.map(q => q.id)).slice(0, 10), 'Mezcladas'); break;
+      case 'quizSt': startQuiz(shuffle(byT(el.dataset.id).map(q => q.id)), L(el.dataset.id).title); break;
+      case 'gopt': { if (G.ch != null) break; const q = QB[G.list[G.i]]; G.ch = +el.dataset.i; const ok = G.ch === q.a; if (ok) G.ok++; rec(q, ok, G.errors); stop(); render();
+        const f = app.querySelector('.fb'); if (f) f.scrollIntoView({ behavior: 'smooth', block: 'center' }); break; }
+      case 'gnext': G.i++; G.ch = null; stop();
+        if (G.i >= G.list.length && G.spaced) { S.sp[G.spaced] = (S.sp[G.spaced] || []).concat(today()); save(); }
+        render(); top(); break;
+      case 'flip': G.flip = !G.flip; render(); break;
+      case 'fnext': G.i = (G.i + 1) % G.list.length; G.flip = false; stop(); render(); break;
+      case 'fprev': G.i = Math.max(0, G.i - 1); G.flip = false; stop(); render(); break;
+      case 'tf': { const t = TF[G.list[G.i]]; G.pick = el.dataset.v === '1'; if (G.pick === t[1]) G.ok++; stop(); render(); break; }
+      case 'tfnext': G.i++; G.pick = null; stop(); render(); top(); break;
+      case 'ordPick': { const gi = +el.dataset.i; const n = ORDER_GAMES[gi].items.length; let arr; do { arr = shuffle([...Array(n).keys()]); } while (arr.every((x, i) => x === i)); Object.assign(G, { gi, arr, checked: false }); render(); top(); break; }
+      case 'ordUp': case 'ordDn': { const i = +el.dataset.i, j = a === 'ordUp' ? i - 1 : i + 1; [G.arr[i], G.arr[j]] = [G.arr[j], G.arr[i]]; G.checked = false; render(); break; }
+      case 'ordCheck': G.checked = true; render(); break;
+      case 'matPick': { const gi = +el.dataset.i; const n = MATCH_GAMES[gi].pairs.length; Object.assign(G, { gi, right: shuffle([...Array(n).keys()]), done: [], sel: null, err: null }); render(); top(); break; }
+      case 'matL': G.sel = +el.dataset.i; G.err = null; render(); break;
+      case 'matR': { const j = +el.dataset.i; if (G.sel == null) { toast('Primero toca una palabra de la izquierda'); break; } if (j === G.sel) { G.done.push(j); G.sel = null; G.err = null; } else { G.err = j; } render(); break; }
+      case 'rdMore': G.n++; stop(); render(); break;
+      case 'rdShow': G.show = true; stop(); render(); break;
+      case 'rdNext': G.i = (G.i + 1) % RIDDLES.length; G.n = 1; G.show = false; stop(); render(); break;
+      case 'vopt': { if (G.ch != null) break; G.ch = +el.dataset.i; if (G.opts[G.i][G.ch] === G.list[G.i]) G.ok++; render(); break; }
+      case 'vnext': G.i++; G.ch = null; stop(); render(); top(); break;
+      case 'cwClue': { UI.cwWord = +el.dataset.i; UI.cwCheck = false; render(); const k = cwKeys(UI.cwWord).find(x => (S.cw[x] || '') !== CWC.cells[x].ch) || cwKeys(UI.cwWord)[0]; const inp = app.querySelector(`[data-cw="${k}"]`); if (inp) inp.focus(); break; }
+      case 'cwCheck': UI.cwCheck = true; render(); { const s = CW.words.filter((_, i) => cwSolved(i)).length; toast(s === CW.words.length ? '¡Crucigrama completo! 🎉' : `Llevas ${s} de ${CW.words.length} palabras`); } break;
+      case 'cwClear': if (ask('cw', 'Toca otra vez «Borrar todo» para confirmar')) { S.cw = {}; save(); UI.cwCheck = false; render(); } break;
+      case 'exStart': UI.ex = { id: el.dataset.id, i: 0, ans: {}, done: false }; stop(); UI.view = 'exam'; render(); top(); break;
+      case 'exOpt': { const e = EXAMS.find(x => x.id === UI.ex.id); UI.ex.ans[e.qs[UI.ex.i]] = +el.dataset.i; render(); break; }
+      case 'exNext': UI.ex.i++; stop(); render(); top(); break;
+      case 'exPrev': UI.ex.i--; stop(); render(); top(); break;
+      case 'exGo': UI.ex.i = +el.dataset.i; stop(); render(); top(); break;
+      case 'exEnd': { const e = EXAMS.find(x => x.id === UI.ex.id); const miss = e.qs.filter(id => UI.ex.ans[id] == null).length;
+        if (miss && !ask('ex', `Te faltan ${miss} preguntas. Toca otra vez para calificar así`)) break;
+        UI.ex.done = true; e.qs.forEach(id => { if (UI.ex.ans[id] != null) rec(QB[id], UI.ex.ans[id] === QB[id].a); });
+        const g = Math.round(e.qs.filter(id => UI.ex.ans[id] === QB[id].a).length / e.qs.length * 100) / 10; S.exams[e.id] = Math.max(S.exams[e.id] || 0, g); save(); stop(); render(); top(); break; }
+      case 'rv': UI.rv[el.dataset.k] = !UI.rv[el.dataset.k]; render(); break;
+      case 'rvAll': { const ti = +el.dataset.i; const t = COMPARE[ti]; t.rows.forEach((r, ri) => r.slice(1).forEach((_, ci) => { UI.rv[ti + '-' + ri + '-' + ci] = true; })); render(); break; }
+      case 'rate': S.rate = +el.dataset.v; save(); render(); speak(`Así hablo a esta velocidad, ${NAME}.`, 'test'); break;
+      case 'auto': S.auto = el.checked; save(); toast(S.auto ? 'La voz explicará sola cada pantalla' : 'La voz solo habla cuando tocas Explícame'); break;
+      case 'reset': if (ask('reset', 'Toca otra vez para borrar todo tu avance (no se puede deshacer)')) { const keep = { rate: S.rate, auto: S.auto, tour: S.tour }; S = Object.assign(defaults(), keep); save(); go('home'); toast('Avance borrado'); } break;
+    }
+  });
+  document.addEventListener('input', ev => {
+    const el = ev.target;
+    if (el.dataset.in === 'note') { S.notes[UI.st] = el.value; save(); }
+    else if (el.dataset.in === 'gq') { UI.q = el.value; SAY = {}; const box = document.getElementById('glist'); if (box) box.innerHTML = glossList(); }
+    else if (el.dataset.cw) {
+      const k = el.dataset.cw; const v = (el.value || '').toUpperCase().normalize('NFD').replace(/[^A-ZÑ]/g, '').slice(-1);
+      el.value = v; if (v) S.cw[k] = v; else delete S.cw[k]; save();
+      if (v) { const ws = UI.cwWord != null && CWC.cells[k].ws.includes(UI.cwWord) ? UI.cwWord : CWC.cells[k].ws[0]; const keys = cwKeys(ws); const nk = keys[keys.indexOf(k) + 1]; if (nk) { const n = app.querySelector(`[data-cw="${nk}"]`); if (n) { n.focus(); n.select(); } } }
+    }
+  });
+  document.addEventListener('keydown', ev => { if (ev.key === 'Escape' && UI.sheet) { UI.sheet = null; stop(); render(); } });
+  document.addEventListener('focusin', ev => { const k = ev.target.dataset && ev.target.dataset.cw; if (k && (UI.cwWord == null || !CWC.cells[k].ws.includes(UI.cwWord))) { UI.cwWord = CWC.cells[k].ws[0]; const box = app.querySelector('.cw-now'); const w = CW.words[UI.cwWord]; if (box) box.innerHTML = `<b>${w.n} ${w.d === 'A' ? '→' : '↓'}</b> ${w.c}`; } });
+
+  /* Pausa amable a los 10 minutos */
+  setInterval(() => { if (UI.view === 'lesson' && !UI.modal && Date.now() - UI.t0 >= PAUSE_MS) { stop(); UI.modal = 'pause'; render(); } }, 15000);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) stop(); });
+
+  render();
+})();
+
+</script>
+</body>
+</html>
